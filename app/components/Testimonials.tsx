@@ -9,10 +9,10 @@ export function Testimonials({ data }: { data: TestimonialsSection }) {
     data.testimonialIds.includes(t.id),
   );
   return (
-    <section className="section-padding py-8 bg-[#0c3061] text-[#e7ecf5]">
+    <section id="testimonials" className="section-padding py-8 bg-[#0c3061] text-[#e7ecf5] scroll-mt-20 md:scroll-mt-24">
       <div className="container">
         {data.heading && (
-          <div className="reveal">
+          <div className="reveal [&_.section-heading_h2]:text-white [&_.section-heading_p]:text-[#b5c7df] [&_.eyebrow]:text-gold [&_.eyebrow-text]:text-gold">
             <SectionHeading heading={data.heading} />
           </div>
         )}

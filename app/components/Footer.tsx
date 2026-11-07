@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 import { content } from "@/app/data";
 import { Icon } from "./Primitives";
@@ -7,12 +10,47 @@ import { ScrollToTop } from "./Interactive";
 import type { FooterSection } from "@/app/data/types";
 
 export function Footer({ data }: { data: FooterSection }) {
+  const path = usePathname();
+  const hasCourses = Boolean(data.courseLinks && data.courseLinks.length > 0);
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("#") && path === "/") {
+      e.preventDefault();
+      const id = href.replace("#", "");
+      const target = document.getElementById(id);
+      if (target) {
+        const top = target.offsetTop - 80;
+        window.scrollTo({
+          top: Math.max(0, top),
+          behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
+            ? "instant"
+            : "smooth",
+        });
+        window.history.pushState(null, "", href);
+      }
+    }
+  };
+
+  const resolveHref = (href: string) => {
+    if (path !== "/" && href.startsWith("#")) {
+      return `/${href}`;
+    }
+    return href;
+  };
+
   return (
     <footer className="bg-gradient-to-r from-[#00366b] to-[#003168] text-[#e7eef7] mt-auto">
-      <div className="reveal container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.1fr_1.1fr] gap-8 lg:gap-10 py-8">
+      <div
+        className={`reveal container grid grid-cols-1 sm:grid-cols-2 ${
+          hasCourses
+            ? "lg:grid-cols-[1.3fr_1fr_1.1fr_1.1fr] gap-8 lg:gap-10"
+            : "lg:grid-cols-[1.35fr_1.1fr_1.25fr] gap-8 lg:gap-12"
+        } py-8`}
+      >
         <div className="sm:col-span-2 lg:col-span-1">
           <Link
-            href="/"
+            href={path === "/" ? "#hero" : "/"}
+            onClick={(e) => handleLinkClick(e, "#hero")}
             className="inline-block mb-4 transition-transform duration-300 hover:scale-[1.02]"
             aria-label={content.brand.name}
           >
@@ -48,9 +86,10 @@ export function Footer({ data }: { data: FooterSection }) {
           </h2>
           <ul className="list-none m-0 p-0 space-y-2 text-sm text-[#d0deee]">
             {data.links.map((l) => (
-              <li key={l.href}>
+              <li key={`${l.label}-${l.href}`}>
                 <Link
-                  href={l.href}
+                  href={resolveHref(l.href)}
+                  onClick={(e) => handleLinkClick(e, l.href)}
                   className="group flex items-center justify-between py-1.5 border-b border-white/10 hover:text-gold transition-colors duration-200"
                 >
                   <span>{l.label}</span>
@@ -60,24 +99,27 @@ export function Footer({ data }: { data: FooterSection }) {
             ))}
           </ul>
         </div>
-        <div className="lg:border-l lg:border-white/15 lg:pl-8">
-          <h2 className="font-heading font-bold text-lg sm:text-xl text-white mb-4 after:content-[''] after:block after:w-9 after:h-1 after:rounded-full after:bg-gold after:mt-2.5">
-            {data.coursesTitle}
-          </h2>
-          <ul className="list-none m-0 p-0 space-y-2 text-sm text-[#d0deee]">
-            {data.courseLinks.map((l) => (
-              <li key={l.href}>
-                <Link
-                  href={l.href}
-                  className="group flex items-center justify-between py-1.5 border-b border-white/10 hover:text-gold transition-colors duration-200"
-                >
-                  <span>{l.label}</span>
-                  <ChevronRight size={16} className="text-gold transition-transform duration-200 group-hover:translate-x-1" />
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {hasCourses && (
+          <div className="lg:border-l lg:border-white/15 lg:pl-8">
+            <h2 className="font-heading font-bold text-lg sm:text-xl text-white mb-4 after:content-[''] after:block after:w-9 after:h-1 after:rounded-full after:bg-gold after:mt-2.5">
+              {data.coursesTitle}
+            </h2>
+            <ul className="list-none m-0 p-0 space-y-2 text-sm text-[#d0deee]">
+              {data.courseLinks?.map((l) => (
+                <li key={`${l.label}-${l.href}`}>
+                  <Link
+                    href={resolveHref(l.href)}
+                    onClick={(e) => handleLinkClick(e, l.href)}
+                    className="group flex items-center justify-between py-1.5 border-b border-white/10 hover:text-gold transition-colors duration-200"
+                  >
+                    <span>{l.label}</span>
+                    <ChevronRight size={16} className="text-gold transition-transform duration-200 group-hover:translate-x-1" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
         <div className="sm:col-span-2 lg:col-span-1 lg:border-l lg:border-white/15 lg:pl-8">
           <h2 className="font-heading font-bold text-lg sm:text-xl text-white mb-4 after:content-[''] after:block after:w-9 after:h-1 after:rounded-full after:bg-gold after:mt-2.5">
             {data.addressTitle}
@@ -86,7 +128,8 @@ export function Footer({ data }: { data: FooterSection }) {
             {data.contacts.map((c) => (
               <a
                 key={c.label}
-                href={c.href}
+                href={resolveHref(c.href)}
+                onClick={(e) => handleLinkClick(e, c.href)}
                 className="group flex items-start gap-3.5 py-2 border-b border-white/10 hover:text-white transition-all duration-200 hover:translate-x-1"
               >
                 <span className="w-10 h-10 rounded-full bg-gold text-navy grid place-items-center shrink-0 transition-transform duration-200 group-hover:scale-110">

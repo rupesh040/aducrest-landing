@@ -1,4 +1,4 @@
-# AduCrest University
+# AduCrest Landing
 
 A complete, responsive university website built with Next.js App Router, React, TypeScript, Tailwind CSS, Lucide icons, and centralized JSON content. The ten reference layouts share navigation, banners, cards, carousels, forms, and a component registry.
 

@@ -140,11 +140,7 @@
     },
     "templateComponents": {
       "template-1": {
-        "shared": {
-          "Topbar": "EducationTopbar1",
-          "Header": "EducationHeader1",
-          "Footer": "EducationFooter1"
-        },
+        "shared": {},
         "pages": {
           "home": {
             "title": "AduCrest University | Learn Today, Build a Brighter Tomorrow",
@@ -159,10 +155,6 @@
                 "component": "EducationAbout1"
               },
               {
-                "key": "popular-courses",
-                "component": "EducationPopularCourses1"
-              },
-              {
                 "key": "admission-cta",
                 "component": "EducationAdmissionCTA1"
               },
@@ -175,164 +167,16 @@
                 "component": "EducationTestimonials1"
               },
               {
-                "key": "latest-blogs",
-                "component": "EducationBlog1"
-              }
-            ]
-          },
-          "about": {
-            "title": "About Us | AduCrest University",
-            "description": "Discover our approach to quality education, supportive learning and a brighter future.",
-            "components": [
-              {
-                "key": "banner-about",
-                "component": "EducationInnerBanner1"
-              },
-              {
-                "key": "about",
-                "component": "EducationAbout1"
-              },
-              {
-                "key": "popular-courses",
-                "component": "EducationPopularCourses1"
-              },
-              {
-                "key": "admission-cta",
-                "component": "EducationAdmissionCTA1"
-              },
-              {
-                "key": "faculty-preview",
-                "component": "EducationFaculty1"
-              }
-            ]
-          },
-          "courses": {
-            "title": "Courses | AduCrest University",
-            "description": "Discover undergraduate and postgraduate programmes at AduCrest University.",
-            "components": [
-              {
-                "key": "banner-courses",
-                "component": "EducationInnerBanner1"
-              },
-              {
-                "key": "courses",
-                "component": "EducationCourseListing1"
-              }
-            ]
-          },
-          "course-detail": {
-            "title": "Course Detail | AduCrest University",
-            "description": "Explore programme information, learning outcomes and admission details.",
-            "components": [
-              {
-                "key": "banner-course-detail",
-                "component": "EducationInnerBanner1"
-              },
-              {
-                "key": "course-detail",
-                "component": "EducationCourseDetail1"
-              }
-            ]
-          },
-          "faculty": {
-            "title": "Faculty | AduCrest University",
-            "description": "Meet the experienced and dedicated faculty at AduCrest University.",
-            "components": [
-              {
-                "key": "banner-faculty",
-                "component": "EducationInnerBanner1"
-              },
-              {
-                "key": "faculty-list",
-                "component": "EducationFacultyListing1"
-              }
-            ]
-          },
-          "blog": {
-            "title": "News & Insights | AduCrest University",
-            "description": "Read academic insights, student stories and practical learning guides.",
-            "components": [
-              {
-                "key": "banner-blog",
-                "component": "EducationInnerBanner1"
-              },
-              {
-                "key": "blog-list",
-                "component": "EducationBlogListing1"
-              }
-            ]
-          },
-          "blog-detail": {
-            "title": "Blog Detail | AduCrest University",
-            "description": "Discover stories and insights from the AduCrest learning community.",
-            "components": [
-              {
-                "key": "banner-blog-detail",
-                "component": "EducationInnerBanner1"
-              },
-              {
-                "key": "blog-detail",
-                "component": "EducationBlogDetail1"
-              }
-            ]
-          },
-          "faq": {
-            "title": "Frequently Asked Questions | AduCrest University",
-            "description": "Find answers about admissions, courses, online learning and student support.",
-            "components": [
-              {
-                "key": "banner-faq",
-                "component": "EducationInnerBanner1"
-              },
-              {
                 "key": "faq",
                 "component": "EducationFAQ1"
-              }
-            ]
-          },
-          "contact": {
-            "title": "Contact Us | AduCrest University",
-            "description": "Get in touch with AduCrest University for course and admissions enquiries.",
-            "components": [
-              {
-                "key": "banner-contact",
-                "component": "EducationInnerBanner1"
-              },
-              {
-                "key": "contact",
-                "component": "EducationContact1"
-              }
-            ]
-          },
-          "faculty-detail": {
-            "title": "Faculty Profile | AduCrest University",
-            "description": "Explore faculty credentials, academic research, and teaching expertise.",
-            "components": [
-              {
-                "key": "banner-faculty-detail",
-                "component": "EducationInnerBanner1"
-              },
-              {
-                "key": "faculty-detail",
-                "component": "EducationFacultyDetail1"
-              }
-            ]
-          },
-          "apply-now": {
-            "title": "Apply Now | AduCrest University",
-            "description": "Start your application to AduCrest University. Fill in the form to apply for your desired course.",
-            "components": [
-              {
-                "key": "banner-apply-now",
-                "component": "EducationInnerBanner1"
-              },
-              {
-                "key": "application",
-                "component": "EducationApplicationForm1"
               },
               {
                 "key": "application-process",
                 "component": "EducationApplicationProcess1"
+              },
+              {
+                "key": "application",
+                "component": "EducationApplicationForm1"
               }
             ]
           }
@@ -347,7 +191,7 @@
               {
                 "icon": "mapPin",
                 "label": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States",
-                "href": "/contact"
+                "href": "#apply"
               },
               {
                 "icon": "phone",
@@ -395,32 +239,28 @@
             "navigation": [
               {
                 "label": "Home",
-                "href": "/"
+                "href": "#hero"
               },
               {
-                "label": "About Us",
-                "href": "/about"
-              },
-              {
-                "label": "Course",
-                "href": "/courses"
+                "label": "About",
+                "href": "#about"
               },
               {
                 "label": "Faculty",
-                "href": "/faculty"
+                "href": "#faculty"
               },
               {
-                "label": "Blog",
-                "href": "/blog"
+                "label": "Reviews",
+                "href": "#testimonials"
               },
               {
-                "label": "Contact",
-                "href": "/contact"
+                "label": "FAQ",
+                "href": "#faq"
               }
             ],
             "apply": {
               "label": "Apply Now",
-              "href": "/apply-now"
+              "href": "#apply"
             }
           }
         }
@@ -459,62 +299,27 @@
             "links": [
               {
                 "label": "Home",
-                "href": "/"
+                "href": "#hero"
               },
               {
-                "label": "About Us",
-                "href": "/about"
+                "label": "About",
+                "href": "#about"
               },
               {
-                "label": "Our Courses",
-                "href": "/courses"
+                "label": "Faculty",
+                "href": "#faculty"
               },
               {
-                "label": "Our Faculty",
-                "href": "/faculty"
+                "label": "Reviews",
+                "href": "#testimonials"
               },
               {
-                "label": "Blogs",
-                "href": "/blog"
+                "label": "FAQ",
+                "href": "#faq"
               },
               {
-                "label": "FAQs",
-                "href": "/faq"
-              },
-              {
-                "label": "Contact Us",
-                "href": "/contact"
-              }
-            ],
-            "coursesTitle": "Our Courses",
-            "courseLinks": [
-              {
-                "label": "Arts & Humanities",
-                "href": "/courses/bachelor-of-arts"
-              },
-              {
-                "label": "Science",
-                "href": "/courses/bachelor-of-science"
-              },
-              {
-                "label": "Commerce",
-                "href": "/courses/bachelor-of-commerce"
-              },
-              {
-                "label": "Engineering",
-                "href": "/courses/bachelor-of-technology"
-              },
-              {
-                "label": "Management",
-                "href": "/courses/master-of-business-administration"
-              },
-              {
-                "label": "Computer Applications",
-                "href": "/courses/master-of-computer-applications"
-              },
-              {
-                "label": "Medical & Health Sciences",
-                "href": "/courses/bachelor-of-pharmacy"
+                "label": "Apply Online",
+                "href": "#apply"
               }
             ],
             "addressTitle": "Our Address",
@@ -534,7 +339,7 @@
               {
                 "icon": "mapPin",
                 "label": "Our Location",
-                "href": "/contact",
+                "href": "#apply",
                 "value": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
               }
             ],
@@ -562,8 +367,8 @@
             ],
             "description": "Discover world-class education, modern facilities and endless opportunities to grow your future at AduCrest University.",
             "button": {
-              "label": "Explore Courses",
-              "href": "/courses"
+              "label": "Apply Now",
+              "href": "#apply"
             },
             "image": {
               "src": "/images/hero/students.webp",
@@ -606,42 +411,11 @@
                 "description": "Experienced faculty and modern facilities for overall growth."
               }
             ],
-            "button": {
-              "label": "About Us",
-              "href": "/about"
-            },
             "phone": {
               "label": "Call Us Anytime",
               "value": "+1 000-000-000",
               "href": "tel:+1000000000"
             }
-          }
-        }
-      },
-      "popular-courses": {
-        "variants": {
-          "EducationPopularCourses1": {
-            "heading": {
-              "eyebrow": "OUR POPULAR COURSES",
-              "title": "Explore Our",
-              "highlight": "Popular Courses",
-              "description": "Choose from a wide range of undergraduate and postgraduate courses designed to help you build skills, gain knowledge and achieve your career goals."
-            },
-            "courseSlugs": [
-              "bachelor-of-arts",
-              "bachelor-of-science",
-              "bachelor-of-commerce",
-              "bachelor-of-technology",
-              "master-of-business-administration",
-              "master-of-computer-applications",
-              "bachelor-of-pharmacy",
-              "bachelor-of-design",
-              "bachelor-of-business-administration",
-              "master-of-arts",
-              "master-of-science",
-              "bachelor-of-computer-applications"
-            ],
-            "pageSize": 4
           }
         }
       },
@@ -669,8 +443,8 @@
               }
             ],
             "button": {
-              "label": "Contact us",
-              "href": "/contact"
+              "label": "Apply for Admission",
+              "href": "#apply"
             },
             "image": {
               "src": "/images/hero/admissions.webp",
@@ -713,293 +487,16 @@
       "testimonials": {
         "variants": {
           "EducationTestimonials1": {
+            "heading": {
+              "eyebrow": "TESTIMONIALS",
+              "title": "What Our",
+              "highlight": "Students Say",
+              "description": "Discover how AduCrest University has shaped the academic journeys, leadership skills, and careers of our students."
+            },
             "testimonialIds": [
               "priya",
               "aarav",
               "anika"
-            ]
-          }
-        }
-      },
-      "latest-blogs": {
-        "variants": {
-          "EducationBlog1": {
-            "heading": {
-              "eyebrow": "OUR LATEST BLOG",
-              "title": "Explore Our Latest",
-              "highlight": "News & Insights",
-              "description": "Stay updated with the latest news, academic insights and inspiring stories from our university."
-            },
-            "blogSlugs": [
-              "creating-inclusive-classrooms",
-              "learning-together-growing-together",
-              "where-curiosity-becomes-confidence",
-              "successful-college-admission",
-              "importance-of-group-learning",
-              "stay-focused-while-studying",
-              "benefits-of-online-education-2026",
-              "complete-guide-to-campus-life",
-              "skills-for-a-bright-career"
-            ],
-            "pageSize": 3
-          }
-        }
-      },
-      "banner-about": {
-        "variants": {
-          "EducationInnerBanner1": {
-            "title": "About Us",
-            "image": {
-              "src": "/images/banners/inner-clean.webp",
-              "alt": "A smiling student speaking with an adviser"
-            },
-            "breadcrumbs": [
-              {
-                "label": "Home",
-                "href": "/"
-              },
-              {
-                "label": "About Us"
-              }
-            ]
-          }
-        }
-      },
-      "banner-courses": {
-        "variants": {
-          "EducationInnerBanner1": {
-            "title": "Our Courses",
-            "image": {
-              "src": "/images/banners/inner-clean.webp",
-              "alt": "A smiling student speaking with an adviser"
-            },
-            "breadcrumbs": [
-              {
-                "label": "Home",
-                "href": "/"
-              },
-              {
-                "label": "Our Courses"
-              }
-            ]
-          }
-        }
-      },
-      "banner-course-detail": {
-        "variants": {
-          "EducationInnerBanner1": {
-            "title": "Course Detail",
-            "image": {
-              "src": "/images/banners/inner-clean.webp",
-              "alt": "A smiling student speaking with an adviser"
-            },
-            "breadcrumbs": [
-              {
-                "label": "Home",
-                "href": "/"
-              },
-              {
-                "label": "Course",
-                "href": "/courses"
-              },
-              {
-                "label": "Course Detail"
-              }
-            ]
-          }
-        }
-      },
-      "banner-faculty": {
-        "variants": {
-          "EducationInnerBanner1": {
-            "title": "Faculty",
-            "image": {
-              "src": "/images/banners/inner-clean.webp",
-              "alt": "A smiling student speaking with an adviser"
-            },
-            "breadcrumbs": [
-              {
-                "label": "Home",
-                "href": "/"
-              },
-              {
-                "label": "Faculty"
-              }
-            ]
-          }
-        }
-      },
-      "banner-blog": {
-        "variants": {
-          "EducationInnerBanner1": {
-            "title": "Blog",
-            "image": {
-              "src": "/images/banners/inner-clean.webp",
-              "alt": "A smiling student speaking with an adviser"
-            },
-            "breadcrumbs": [
-              {
-                "label": "Home",
-                "href": "/"
-              },
-              {
-                "label": "Blog"
-              }
-            ]
-          }
-        }
-      },
-      "banner-blog-detail": {
-        "variants": {
-          "EducationInnerBanner1": {
-            "title": "Blog Detail",
-            "image": {
-              "src": "/images/banners/inner-clean.webp",
-              "alt": "A smiling student speaking with an adviser"
-            },
-            "breadcrumbs": [
-              {
-                "label": "Home",
-                "href": "/"
-              },
-              {
-                "label": "Blog",
-                "href": "/blog"
-              },
-              {
-                "label": "Blog Detail"
-              }
-            ]
-          }
-        }
-      },
-      "banner-faq": {
-        "variants": {
-          "EducationInnerBanner1": {
-            "title": "Faq",
-            "image": {
-              "src": "/images/banners/inner-clean.webp",
-              "alt": "A smiling student speaking with an adviser"
-            },
-            "breadcrumbs": [
-              {
-                "label": "Home",
-                "href": "/"
-              },
-              {
-                "label": "Faq"
-              }
-            ]
-          }
-        }
-      },
-      "banner-contact": {
-        "variants": {
-          "EducationInnerBanner1": {
-            "title": "Contact Us",
-            "image": {
-              "src": "/images/banners/inner-clean.webp",
-              "alt": "A smiling student speaking with an adviser"
-            },
-            "breadcrumbs": [
-              {
-                "label": "Home",
-                "href": "/"
-              },
-              {
-                "label": "Contact Us"
-              }
-            ]
-          }
-        }
-      },
-      "banner-apply-now": {
-        "variants": {
-          "EducationInnerBanner1": {
-            "title": "Apply Now",
-            "image": {
-              "src": "/images/banners/inner-clean.webp",
-              "alt": "A smiling student speaking with an adviser"
-            },
-            "breadcrumbs": [
-              {
-                "label": "Home",
-                "href": "/"
-              },
-              {
-                "label": "Apply Now"
-              }
-            ]
-          }
-        }
-      },
-      "courses": {
-        "variants": {
-          "EducationCourseListing1": {
-            "heading": {
-              "eyebrow": "OUR POPULAR COURSES",
-              "title": "Explore Our",
-              "highlight": "Popular Courses",
-              "description": "Choose from a wide range of undergraduate and postgraduate courses designed to help you build skills, gain knowledge and achieve your career goals."
-            },
-            "pageSize": 8
-          }
-        }
-      },
-      "course-detail": {
-        "variants": {
-          "EducationCourseDetail1": {
-            "overviewHeading": {
-              "title": "Course",
-              "highlight": "Overview"
-            },
-            "outcomesHeading": {
-              "title": "What You Will",
-              "highlight": "Learn"
-            },
-            "detailsHeading": {
-              "title": "Course",
-              "highlight": "Details"
-            },
-            "applyLabel": "Apply Now"
-          }
-        }
-      },
-      "faculty-list": {
-        "variants": {
-          "EducationFacultyListing1": {
-            "heading": {
-              "eyebrow": "OUR FACULTY",
-              "title": "Meet Our",
-              "highlight": "Experienced Faculties",
-              "description": "Our dedicated faculty members bring knowledge, experience and passion to create a supportive learning environment for every student."
-            },
-            "pageSize": 12
-          }
-        }
-      },
-      "blog-list": {
-        "variants": {
-          "EducationBlogListing1": {
-            "heading": {
-              "eyebrow": "OUR LATEST BLOG",
-              "title": "Explore Our Latest",
-              "highlight": "News & Insights",
-              "description": "Stay updated with the latest news, academic insights and inspiring stories from our university."
-            },
-            "pageSize": 6
-          }
-        }
-      },
-      "blog-detail": {
-        "variants": {
-          "EducationBlogDetail1": {
-            "recentTitle": "Recent Posts",
-            "recentSlugs": [
-              "successful-college-admission",
-              "importance-of-group-learning",
-              "stay-focused-while-studying",
-              "complete-guide-to-campus-life"
             ]
           }
         }
@@ -1022,7 +519,7 @@
               "description": "We're here to help you with all your queries.",
               "button": {
                 "label": "Contact Us",
-                "href": "/contact"
+                "href": "#apply"
               }
             },
             "items": [
@@ -1060,97 +557,36 @@
           }
         }
       },
-      "contact": {
+      "application-process": {
         "variants": {
-          "EducationContact1": {
+          "EducationApplicationProcess1": {
             "heading": {
-              "eyebrow": "GET IN TOUCH",
-              "title": "Contact",
-              "highlight": "Us",
-              "description": "We'd love to hear from you! Whether you have a question about admissions, courses, facilities or any other enquiry, our team is here to help."
+              "eyebrow": "SIMPLE STEPS",
+              "title": "Our",
+              "highlight": "Application Process"
             },
-            "form": {
-              "title": "Send Us a",
-              "highlight": "Message",
-              "description": "Fill out the form below with your enquiry.",
-              "submitLabel": "Send Message",
-              "fields": [
-                "fullName",
-                "email",
-                "phone",
-                "course",
-                "message"
-              ]
-            },
-            "information": [
+            "steps": [
               {
-                "icon": "mapPin",
-                "title": "Our Address",
-                "lines": [
-                  "Rachel Oto lemamea, 300 Rexburg Ave,",
-                  "Fort Washington, MD 20744, United States"
-                ],
-                "href": "https://maps.google.com/?q=300+Rexburg+Ave+Fort+Washington+MD+20744"
+                "title": "Fill Application Form",
+                "description": "Provide your basic details and select your desired course.",
+                "icon": "fileText"
               },
               {
-                "icon": "phone",
-                "title": "Call Us",
-                "lines": [
-                  "+1 000-000-000",
-                  "+1 000-000-000"
-                ],
-                "href": "tel:+1000000000"
+                "title": "Submit Documents",
+                "description": "Upload the required documents.",
+                "icon": "file-pen-line"
               },
               {
-                "icon": "mail",
-                "title": "Email Us",
-                "lines": [
-                  "info@xyz.com",
-                  "info@xyz.com"
-                ],
-                "href": "mailto:info@xyz.com"
+                "title": "Application Review",
+                "description": "Our team will review your application.",
+                "icon": "clipboard-check"
               },
               {
-                "icon": "clock",
-                "title": "Working Hours",
-                "lines": [
-                  "Monday - Friday",
-                  "9:00 AM - 6:00 PM"
-                ]
+                "title": "Admission Confirmation",
+                "description": "Get confirmation via email and start your journey.",
+                "icon": "mail-open"
               }
-            ],
-            "image": {
-              "src": "/images/contact/campus.jpg",
-              "alt": "Students approaching a modern campus building"
-            },
-            "socialTitle": "Follow Us",
-            "socials": [
-              {
-                "label": "Facebook",
-                "href": "https://www.facebook.com/",
-                "icon": "facebook"
-              },
-              {
-                "label": "Instagram",
-                "href": "https://www.instagram.com/",
-                "icon": "instagram"
-              },
-              {
-                "label": "LinkedIn",
-                "href": "https://www.linkedin.com/",
-                "icon": "linkedin"
-              },
-              {
-                "label": "YouTube",
-                "href": "https://www.youtube.com/",
-                "icon": "youtube"
-              }
-            ],
-            "map": {
-              "embedUrl": "https://maps.google.com/maps?q=300%20Rexburg%20Ave%2C%20Fort%20Washington%2C%20MD%2020744&t=&z=14&ie=UTF8&iwloc=&output=embed",
-              "title": "Campus location map",
-              "notice": ""
-            }
+            ]
           }
         }
       },
@@ -1158,13 +594,13 @@
         "variants": {
           "EducationApplicationForm1": {
             "heading": {
-              "title": "Application",
+              "title": "Admission",
               "highlight": "Form"
             },
             "form": {
-              "title": "Application",
+              "title": "Admission",
               "highlight": "Form",
-              "description": "Fill in your details below to apply for your desired course.",
+              "description": "Fill in your details below to apply for admission to your desired course.",
               "submitLabel": "Submit Application",
               "fields": [
                 "fullName",
@@ -1214,76 +650,7 @@
                 "title": "Visit Campus",
                 "description": "300 Rexburg Ave,",
                 "value": "Fort Washington, MD 20744, USA",
-                "href": "/contact"
-              }
-            ]
-          }
-        }
-      },
-      "application-process": {
-        "variants": {
-          "EducationApplicationProcess1": {
-            "heading": {
-              "eyebrow": "SIMPLE STEPS",
-              "title": "Our",
-              "highlight": "Application Process"
-            },
-            "steps": [
-              {
-                "title": "Fill Application Form",
-                "description": "Provide your basic details and select your desired course.",
-                "icon": "fileText"
-              },
-              {
-                "title": "Submit Documents",
-                "description": "Upload the required documents.",
-                "icon": "file-pen-line"
-              },
-              {
-                "title": "Application Review",
-                "description": "Our team will review your application.",
-                "icon": "clipboard-check"
-              },
-              {
-                "title": "Admission Confirmation",
-                "description": "Get confirmation via email and start your journey.",
-                "icon": "mail-open"
-              }
-            ]
-          }
-        }
-      },
-      "faculty-detail": {
-        "variants": {
-          "EducationFacultyDetail1": {
-            "profileEyebrow": "Faculty Profile",
-            "contactTitle": "Get in Touch",
-            "subjectsTitle": "Subjects Teaching",
-            "aboutTitle": "About",
-            "educationTitle": "Education",
-            "experienceTitle": "Experience"
-          }
-        }
-      },
-      "banner-faculty-detail": {
-        "variants": {
-          "EducationInnerBanner1": {
-            "title": "Faculty Profile",
-            "image": {
-              "src": "/images/banners/inner-clean.webp",
-              "alt": "A smiling student speaking with an adviser"
-            },
-            "breadcrumbs": [
-              {
-                "label": "Home",
-                "href": "/"
-              },
-              {
-                "label": "Faculty",
-                "href": "/faculty"
-              },
-              {
-                "label": "Faculty Profile"
+                "href": "#hero"
               }
             ]
           }
@@ -1826,1702 +1193,182 @@
       "faculty": [
         {
           "id": "neha-sharma",
+          "slug": "neha-sharma",
           "name": "Dr. Neha Sharma",
           "role": "Professor of Computer Science",
           "department": "Computer Applications",
           "image": {
             "src": "/images/faculty/faculty-1.jpg",
             "alt": "Dr. Neha Sharma, Professor of Computer Science at AduCrest University"
-          },
-          "slug": "neha-sharma",
-          "shortBio": "Dr. Neha Sharma is a dedicated educator and researcher with a strong passion for technology and student success. With years of academic and industry experience, she focuses on delivering practical, future-ready knowledge and inspiring students to achieve their goals.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Dr. Neha Sharma is a Professor of Computer Science at AduCrest University. She has a deep interest in emerging technologies, software development and AI-driven solutions. Her teaching approach combines theoretical knowledge with real-world applications, helping students build strong technical skills and problem-solving abilities.",
-            "With a strong academic foundation and active research engagement, she mentors undergraduate and postgraduate students in competitive programming, full-stack engineering, and distributed systems. Her published research focuses on machine learning architectures and scalable cloud infrastructure."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in Computer Science",
-              "institution": "Delhi University, New Delhi",
-              "year": "2018 - 2022"
-            },
-            {
-              "degree": "M.Tech. in Computer Science",
-              "institution": "IIT Delhi, India",
-              "year": "2014 - 2016"
-            },
-            {
-              "degree": "B.Tech. in Information Technology",
-              "institution": "University of Delhi, India",
-              "year": "2010 - 2014"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Professor of Computer Science",
-              "institution": "AduCrest University, New Delhi",
-              "year": "2018 - Present"
-            },
-            {
-              "position": "Associate Professor",
-              "institution": "Modern Institute of Technology, Delhi",
-              "year": "2014 - 2018"
-            },
-            {
-              "position": "Assistant Professor",
-              "institution": "Global Education College, New Delhi",
-              "year": "2010 - 2014"
-            }
-          ],
-          "subjects": [
-            "Computer Programming",
-            "Data Structures",
-            "Web Development",
-            "Software Engineering",
-            "Artificial Intelligence",
-            "Database Management"
-          ]
+          }
         },
         {
           "id": "arjun-mehta",
+          "slug": "arjun-mehta",
           "name": "Prof. Arjun Mehta",
           "role": "Head of Business Management",
           "department": "Management",
           "image": {
             "src": "/images/faculty/faculty-2.jpg",
             "alt": "Prof. Arjun Mehta, Head of Business Management at AduCrest University"
-          },
-          "slug": "arjun-mehta",
-          "shortBio": "Prof. Arjun Mehta is a seasoned business strategist and academic leader with extensive corporate consulting and management education experience.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Prof. Arjun Mehta heads the Department of Business Management at AduCrest University. He specializes in strategic management, corporate leadership, and enterprise development.",
-            "He brings over 18 years of corporate consulting and executive coaching to the classroom, preparing aspiring entrepreneurs and managers for the dynamic global economy."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in Management Studies",
-              "institution": "FMS, Delhi University",
-              "year": "2012 - 2016"
-            },
-            {
-              "degree": "MBA in Strategic Management",
-              "institution": "IIM Ahmedabad",
-              "year": "2006 - 2008"
-            },
-            {
-              "degree": "B.Com. (Honours)",
-              "institution": "SRCC, Delhi University",
-              "year": "2003 - 2006"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Head of Business Management",
-              "institution": "AduCrest University",
-              "year": "2019 - Present"
-            },
-            {
-              "position": "Senior Management Consultant",
-              "institution": "Global McKinsey Advisory",
-              "year": "2014 - 2019"
-            },
-            {
-              "position": "Assistant Professor of Management",
-              "institution": "Symbiosis University",
-              "year": "2008 - 2014"
-            }
-          ],
-          "subjects": [
-            "Strategic Management",
-            "Corporate Finance",
-            "Organizational Behavior",
-            "Entrepreneurship Development",
-            "Business Ethics & Leadership",
-            "Marketing Strategy"
-          ]
+          }
         },
         {
           "id": "pooja-verma",
+          "slug": "pooja-verma",
           "name": "Dr. Pooja Verma",
           "role": "Faculty of English Literature",
           "department": "Arts & Humanities",
           "image": {
             "src": "/images/faculty/faculty-3.jpg",
             "alt": "Dr. Pooja Verma, Faculty of English Literature at AduCrest University"
-          },
-          "slug": "pooja-verma",
-          "shortBio": "Dr. Pooja Verma is an accomplished scholar of English Literature, critical theory, and postcolonial narratives with numerous peer-reviewed publications.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Dr. Pooja Verma guides students through British, American, and contemporary postcolonial literature, fostering critical enquiry and creative expression.",
-            "Her interactive seminar model empowers students to analyze cultural narratives, rhetoric, and modern literary forms with analytical rigor."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in English Literature",
-              "institution": "Jawaharlal Nehru University, New Delhi",
-              "year": "2015 - 2019"
-            },
-            {
-              "degree": "M.A. in English",
-              "institution": "St. Stephen’s College, Delhi",
-              "year": "2013 - 2015"
-            },
-            {
-              "degree": "B.A. (Hons) in English",
-              "institution": "Miranda House, Delhi University",
-              "year": "2010 - 2013"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Associate Professor",
-              "institution": "AduCrest University",
-              "year": "2020 - Present"
-            },
-            {
-              "position": "Assistant Professor",
-              "institution": "Lady Shri Ram College, Delhi",
-              "year": "2015 - 2020"
-            }
-          ],
-          "subjects": [
-            "Modern British Poetry",
-            "Postcolonial Studies",
-            "Literary Theory & Criticism",
-            "Creative Writing",
-            "World Literature in Translation",
-            "Academic Research & Writing"
-          ]
+          }
         },
         {
           "id": "rohan-gupta",
+          "slug": "rohan-gupta",
           "name": "Prof. Rohan Gupta",
           "role": "Faculty of Mathematics",
           "department": "Science",
           "image": {
             "src": "/images/faculty/faculty-4.jpg",
             "alt": "Prof. Rohan Gupta, Faculty of Mathematics at AduCrest University"
-          },
-          "slug": "rohan-gupta",
-          "shortBio": "Prof. Rohan Gupta is an esteemed educator in Science at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Prof. Rohan Gupta serves as Faculty of Mathematics at AduCrest University. With dedicated expertise in Science, they bring modern pedagogy and industry perspectives into classroom discussions.",
-            "Passionate about fostering critical thinking and research methodology, Prof. Rohan Gupta supervises undergraduate student projects and coordinates academic workshops across the faculty."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in Science",
-              "institution": "Premier Central University, New Delhi",
-              "year": "2014 - 2018"
-            },
-            {
-              "degree": "Master's in Science",
-              "institution": "National Institute of Technology",
-              "year": "2011 - 2013"
-            },
-            {
-              "degree": "Bachelor's Degree",
-              "institution": "State University",
-              "year": "2007 - 2011"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Faculty of Mathematics",
-              "institution": "AduCrest University, New Delhi",
-              "year": "2019 - Present"
-            },
-            {
-              "position": "Senior Lecturer",
-              "institution": "Institute of Higher Studies",
-              "year": "2014 - 2019"
-            }
-          ],
-          "subjects": [
-            "Science Foundations",
-            "Advanced Research Methodology",
-            "Applied Analytical Methods",
-            "Professional Seminar",
-            "Capstone Project Mentorship"
-          ]
+          }
         },
         {
           "id": "ananya-singh",
+          "slug": "ananya-singh",
           "name": "Ms. Ananya Singh",
           "role": "Faculty of Psychology",
           "department": "Arts & Humanities",
           "image": {
             "src": "/images/faculty/faculty-5.jpg",
             "alt": "Ms. Ananya Singh, Faculty of Psychology at AduCrest University"
-          },
-          "slug": "ananya-singh",
-          "shortBio": "Ms. Ananya Singh is an esteemed educator in Arts & Humanities at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Ms. Ananya Singh serves as Faculty of Psychology at AduCrest University. With dedicated expertise in Arts & Humanities, they bring modern pedagogy and industry perspectives into classroom discussions.",
-            "Passionate about fostering critical thinking and research methodology, Ms. Ananya Singh supervises undergraduate student projects and coordinates academic workshops across the faculty."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in Arts & Humanities",
-              "institution": "Premier Central University, New Delhi",
-              "year": "2014 - 2018"
-            },
-            {
-              "degree": "Master's in Arts & Humanities",
-              "institution": "National Institute of Technology",
-              "year": "2011 - 2013"
-            },
-            {
-              "degree": "Bachelor's Degree",
-              "institution": "State University",
-              "year": "2007 - 2011"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Faculty of Psychology",
-              "institution": "AduCrest University, New Delhi",
-              "year": "2019 - Present"
-            },
-            {
-              "position": "Senior Lecturer",
-              "institution": "Institute of Higher Studies",
-              "year": "2014 - 2019"
-            }
-          ],
-          "subjects": [
-            "Arts & Humanities Foundations",
-            "Advanced Research Methodology",
-            "Applied Analytical Methods",
-            "Professional Seminar",
-            "Capstone Project Mentorship"
-          ]
+          }
         },
         {
           "id": "vikram-joshi",
+          "slug": "vikram-joshi",
           "name": "Dr. Vikram Joshi",
           "role": "Faculty of History",
           "department": "Arts & Humanities",
           "image": {
             "src": "/images/faculty/faculty-6.jpg",
             "alt": "Dr. Vikram Joshi, Faculty of History at AduCrest University"
-          },
-          "slug": "vikram-joshi",
-          "shortBio": "Dr. Vikram Joshi is an esteemed educator in Arts & Humanities at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Dr. Vikram Joshi serves as Faculty of History at AduCrest University. With dedicated expertise in Arts & Humanities, they bring modern pedagogy and industry perspectives into classroom discussions.",
-            "Passionate about fostering critical thinking and research methodology, Dr. Vikram Joshi supervises undergraduate student projects and coordinates academic workshops across the faculty."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in Arts & Humanities",
-              "institution": "Premier Central University, New Delhi",
-              "year": "2014 - 2018"
-            },
-            {
-              "degree": "Master's in Arts & Humanities",
-              "institution": "National Institute of Technology",
-              "year": "2011 - 2013"
-            },
-            {
-              "degree": "Bachelor's Degree",
-              "institution": "State University",
-              "year": "2007 - 2011"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Faculty of History",
-              "institution": "AduCrest University, New Delhi",
-              "year": "2019 - Present"
-            },
-            {
-              "position": "Senior Lecturer",
-              "institution": "Institute of Higher Studies",
-              "year": "2014 - 2019"
-            }
-          ],
-          "subjects": [
-            "Arts & Humanities Foundations",
-            "Advanced Research Methodology",
-            "Applied Analytical Methods",
-            "Professional Seminar",
-            "Capstone Project Mentorship"
-          ]
+          }
         },
         {
           "id": "kunal-sharma",
+          "slug": "kunal-sharma",
           "name": "Mr. Kunal Sharma",
           "role": "Assistant Professor",
           "department": "Computer Applications",
           "image": {
             "src": "/images/faculty/faculty-7.jpg",
             "alt": "Mr. Kunal Sharma, Assistant Professor at AduCrest University"
-          },
-          "slug": "kunal-sharma",
-          "shortBio": "Mr. Kunal Sharma is an esteemed educator in Computer Applications at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Mr. Kunal Sharma serves as Assistant Professor at AduCrest University. With dedicated expertise in Computer Applications, they bring modern pedagogy and industry perspectives into classroom discussions.",
-            "Passionate about fostering critical thinking and research methodology, Mr. Kunal Sharma supervises undergraduate student projects and coordinates academic workshops across the faculty."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in Computer Applications",
-              "institution": "Premier Central University, New Delhi",
-              "year": "2014 - 2018"
-            },
-            {
-              "degree": "Master's in Computer Applications",
-              "institution": "National Institute of Technology",
-              "year": "2011 - 2013"
-            },
-            {
-              "degree": "Bachelor's Degree",
-              "institution": "State University",
-              "year": "2007 - 2011"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Assistant Professor",
-              "institution": "AduCrest University, New Delhi",
-              "year": "2019 - Present"
-            },
-            {
-              "position": "Senior Lecturer",
-              "institution": "Institute of Higher Studies",
-              "year": "2014 - 2019"
-            }
-          ],
-          "subjects": [
-            "Computer Applications Foundations",
-            "Advanced Research Methodology",
-            "Applied Analytical Methods",
-            "Professional Seminar",
-            "Capstone Project Mentorship"
-          ]
+          }
         },
         {
           "id": "kavya-nair",
+          "slug": "kavya-nair",
           "name": "Dr. Kavya Nair",
           "role": "Faculty of Economics",
           "department": "Commerce",
           "image": {
             "src": "/images/faculty/faculty-8.jpg",
             "alt": "Dr. Kavya Nair, Faculty of Economics at AduCrest University"
-          },
-          "slug": "kavya-nair",
-          "shortBio": "Dr. Kavya Nair is an esteemed educator in Commerce at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Dr. Kavya Nair serves as Faculty of Economics at AduCrest University. With dedicated expertise in Commerce, they bring modern pedagogy and industry perspectives into classroom discussions.",
-            "Passionate about fostering critical thinking and research methodology, Dr. Kavya Nair supervises undergraduate student projects and coordinates academic workshops across the faculty."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in Commerce",
-              "institution": "Premier Central University, New Delhi",
-              "year": "2014 - 2018"
-            },
-            {
-              "degree": "Master's in Commerce",
-              "institution": "National Institute of Technology",
-              "year": "2011 - 2013"
-            },
-            {
-              "degree": "Bachelor's Degree",
-              "institution": "State University",
-              "year": "2007 - 2011"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Faculty of Economics",
-              "institution": "AduCrest University, New Delhi",
-              "year": "2019 - Present"
-            },
-            {
-              "position": "Senior Lecturer",
-              "institution": "Institute of Higher Studies",
-              "year": "2014 - 2019"
-            }
-          ],
-          "subjects": [
-            "Commerce Foundations",
-            "Advanced Research Methodology",
-            "Applied Analytical Methods",
-            "Professional Seminar",
-            "Capstone Project Mentorship"
-          ]
+          }
         },
         {
           "id": "aditya-rao",
+          "slug": "aditya-rao",
           "name": "Mr. Aditya Rao",
           "role": "Faculty of Physics",
           "department": "Science",
           "image": {
             "src": "/images/faculty/faculty-9.jpg",
             "alt": "Mr. Aditya Rao, Faculty of Physics at AduCrest University"
-          },
-          "slug": "aditya-rao",
-          "shortBio": "Mr. Aditya Rao is an esteemed educator in Science at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Mr. Aditya Rao serves as Faculty of Physics at AduCrest University. With dedicated expertise in Science, they bring modern pedagogy and industry perspectives into classroom discussions.",
-            "Passionate about fostering critical thinking and research methodology, Mr. Aditya Rao supervises undergraduate student projects and coordinates academic workshops across the faculty."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in Science",
-              "institution": "Premier Central University, New Delhi",
-              "year": "2014 - 2018"
-            },
-            {
-              "degree": "Master's in Science",
-              "institution": "National Institute of Technology",
-              "year": "2011 - 2013"
-            },
-            {
-              "degree": "Bachelor's Degree",
-              "institution": "State University",
-              "year": "2007 - 2011"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Faculty of Physics",
-              "institution": "AduCrest University, New Delhi",
-              "year": "2019 - Present"
-            },
-            {
-              "position": "Senior Lecturer",
-              "institution": "Institute of Higher Studies",
-              "year": "2014 - 2019"
-            }
-          ],
-          "subjects": [
-            "Science Foundations",
-            "Advanced Research Methodology",
-            "Applied Analytical Methods",
-            "Professional Seminar",
-            "Capstone Project Mentorship"
-          ]
+          }
         },
         {
           "id": "sneha-kapoor",
+          "slug": "sneha-kapoor",
           "name": "Ms. Sneha Kapoor",
           "role": "Faculty of Biology",
           "department": "Science",
           "image": {
             "src": "/images/faculty/faculty-10.jpg",
             "alt": "Ms. Sneha Kapoor, Faculty of Biology at AduCrest University"
-          },
-          "slug": "sneha-kapoor",
-          "shortBio": "Ms. Sneha Kapoor is an esteemed educator in Science at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Ms. Sneha Kapoor serves as Faculty of Biology at AduCrest University. With dedicated expertise in Science, they bring modern pedagogy and industry perspectives into classroom discussions.",
-            "Passionate about fostering critical thinking and research methodology, Ms. Sneha Kapoor supervises undergraduate student projects and coordinates academic workshops across the faculty."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in Science",
-              "institution": "Premier Central University, New Delhi",
-              "year": "2014 - 2018"
-            },
-            {
-              "degree": "Master's in Science",
-              "institution": "National Institute of Technology",
-              "year": "2011 - 2013"
-            },
-            {
-              "degree": "Bachelor's Degree",
-              "institution": "State University",
-              "year": "2007 - 2011"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Faculty of Biology",
-              "institution": "AduCrest University, New Delhi",
-              "year": "2019 - Present"
-            },
-            {
-              "position": "Senior Lecturer",
-              "institution": "Institute of Higher Studies",
-              "year": "2014 - 2019"
-            }
-          ],
-          "subjects": [
-            "Science Foundations",
-            "Advanced Research Methodology",
-            "Applied Analytical Methods",
-            "Professional Seminar",
-            "Capstone Project Mentorship"
-          ]
+          }
         },
         {
           "id": "manish-pandey",
+          "slug": "manish-pandey",
           "name": "Dr. Manish Pandey",
           "role": "Faculty of Chemistry",
           "department": "Science",
           "image": {
             "src": "/images/faculty/faculty-11.jpg",
             "alt": "Dr. Manish Pandey, Faculty of Chemistry at AduCrest University"
-          },
-          "slug": "manish-pandey",
-          "shortBio": "Dr. Manish Pandey is an esteemed educator in Science at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Dr. Manish Pandey serves as Faculty of Chemistry at AduCrest University. With dedicated expertise in Science, they bring modern pedagogy and industry perspectives into classroom discussions.",
-            "Passionate about fostering critical thinking and research methodology, Dr. Manish Pandey supervises undergraduate student projects and coordinates academic workshops across the faculty."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in Science",
-              "institution": "Premier Central University, New Delhi",
-              "year": "2014 - 2018"
-            },
-            {
-              "degree": "Master's in Science",
-              "institution": "National Institute of Technology",
-              "year": "2011 - 2013"
-            },
-            {
-              "degree": "Bachelor's Degree",
-              "institution": "State University",
-              "year": "2007 - 2011"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Faculty of Chemistry",
-              "institution": "AduCrest University, New Delhi",
-              "year": "2019 - Present"
-            },
-            {
-              "position": "Senior Lecturer",
-              "institution": "Institute of Higher Studies",
-              "year": "2014 - 2019"
-            }
-          ],
-          "subjects": [
-            "Science Foundations",
-            "Advanced Research Methodology",
-            "Applied Analytical Methods",
-            "Professional Seminar",
-            "Capstone Project Mentorship"
-          ]
+          }
         },
         {
           "id": "riya-malhotra",
+          "slug": "riya-malhotra",
           "name": "Ms. Riya Malhotra",
           "role": "Faculty of Arts",
           "department": "Design",
           "image": {
             "src": "/images/faculty/faculty-12.jpg",
             "alt": "Ms. Riya Malhotra, Faculty of Arts at AduCrest University"
-          },
-          "slug": "riya-malhotra",
-          "shortBio": "Ms. Riya Malhotra is an esteemed educator in Design at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Ms. Riya Malhotra serves as Faculty of Arts at AduCrest University. With dedicated expertise in Design, they bring modern pedagogy and industry perspectives into classroom discussions.",
-            "Passionate about fostering critical thinking and research methodology, Ms. Riya Malhotra supervises undergraduate student projects and coordinates academic workshops across the faculty."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in Design",
-              "institution": "Premier Central University, New Delhi",
-              "year": "2014 - 2018"
-            },
-            {
-              "degree": "Master's in Design",
-              "institution": "National Institute of Technology",
-              "year": "2011 - 2013"
-            },
-            {
-              "degree": "Bachelor's Degree",
-              "institution": "State University",
-              "year": "2007 - 2011"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Faculty of Arts",
-              "institution": "AduCrest University, New Delhi",
-              "year": "2019 - Present"
-            },
-            {
-              "position": "Senior Lecturer",
-              "institution": "Institute of Higher Studies",
-              "year": "2014 - 2019"
-            }
-          ],
-          "subjects": [
-            "Design Foundations",
-            "Advanced Research Methodology",
-            "Applied Analytical Methods",
-            "Professional Seminar",
-            "Capstone Project Mentorship"
-          ]
+          }
         },
         {
           "id": "meera-iyer",
+          "slug": "meera-iyer",
           "name": "Dr. Meera Iyer",
           "role": "Faculty of Environmental Studies",
           "department": "Science",
           "image": {
             "src": "/images/faculty/faculty-1.jpg",
             "alt": "Dr. Meera Iyer, Faculty of Environmental Studies at AduCrest University"
-          },
-          "slug": "meera-iyer",
-          "shortBio": "Dr. Meera Iyer is an esteemed educator in Science at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Dr. Meera Iyer serves as Faculty of Environmental Studies at AduCrest University. With dedicated expertise in Science, they bring modern pedagogy and industry perspectives into classroom discussions.",
-            "Passionate about fostering critical thinking and research methodology, Dr. Meera Iyer supervises undergraduate student projects and coordinates academic workshops across the faculty."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in Science",
-              "institution": "Premier Central University, New Delhi",
-              "year": "2014 - 2018"
-            },
-            {
-              "degree": "Master's in Science",
-              "institution": "National Institute of Technology",
-              "year": "2011 - 2013"
-            },
-            {
-              "degree": "Bachelor's Degree",
-              "institution": "State University",
-              "year": "2007 - 2011"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Faculty of Environmental Studies",
-              "institution": "AduCrest University, New Delhi",
-              "year": "2019 - Present"
-            },
-            {
-              "position": "Senior Lecturer",
-              "institution": "Institute of Higher Studies",
-              "year": "2014 - 2019"
-            }
-          ],
-          "subjects": [
-            "Science Foundations",
-            "Advanced Research Methodology",
-            "Applied Analytical Methods",
-            "Professional Seminar",
-            "Capstone Project Mentorship"
-          ]
+          }
         },
         {
           "id": "rahul-bhatia",
+          "slug": "rahul-bhatia",
           "name": "Prof. Rahul Bhatia",
           "role": "Faculty of Accounting",
           "department": "Commerce",
           "image": {
             "src": "/images/faculty/faculty-2.jpg",
             "alt": "Prof. Rahul Bhatia, Faculty of Accounting at AduCrest University"
-          },
-          "slug": "rahul-bhatia",
-          "shortBio": "Prof. Rahul Bhatia is an esteemed educator in Commerce at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Prof. Rahul Bhatia serves as Faculty of Accounting at AduCrest University. With dedicated expertise in Commerce, they bring modern pedagogy and industry perspectives into classroom discussions.",
-            "Passionate about fostering critical thinking and research methodology, Prof. Rahul Bhatia supervises undergraduate student projects and coordinates academic workshops across the faculty."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in Commerce",
-              "institution": "Premier Central University, New Delhi",
-              "year": "2014 - 2018"
-            },
-            {
-              "degree": "Master's in Commerce",
-              "institution": "National Institute of Technology",
-              "year": "2011 - 2013"
-            },
-            {
-              "degree": "Bachelor's Degree",
-              "institution": "State University",
-              "year": "2007 - 2011"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Faculty of Accounting",
-              "institution": "AduCrest University, New Delhi",
-              "year": "2019 - Present"
-            },
-            {
-              "position": "Senior Lecturer",
-              "institution": "Institute of Higher Studies",
-              "year": "2014 - 2019"
-            }
-          ],
-          "subjects": [
-            "Commerce Foundations",
-            "Advanced Research Methodology",
-            "Applied Analytical Methods",
-            "Professional Seminar",
-            "Capstone Project Mentorship"
-          ]
+          }
         },
         {
           "id": "isha-khanna",
+          "slug": "isha-khanna",
           "name": "Ms. Isha Khanna",
           "role": "Faculty of Visual Communication",
           "department": "Design",
           "image": {
             "src": "/images/faculty/faculty-3.jpg",
             "alt": "Ms. Isha Khanna, Faculty of Visual Communication at AduCrest University"
-          },
-          "slug": "isha-khanna",
-          "shortBio": "Ms. Isha Khanna is an esteemed educator in Design at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Ms. Isha Khanna serves as Faculty of Visual Communication at AduCrest University. With dedicated expertise in Design, they bring modern pedagogy and industry perspectives into classroom discussions.",
-            "Passionate about fostering critical thinking and research methodology, Ms. Isha Khanna supervises undergraduate student projects and coordinates academic workshops across the faculty."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in Design",
-              "institution": "Premier Central University, New Delhi",
-              "year": "2014 - 2018"
-            },
-            {
-              "degree": "Master's in Design",
-              "institution": "National Institute of Technology",
-              "year": "2011 - 2013"
-            },
-            {
-              "degree": "Bachelor's Degree",
-              "institution": "State University",
-              "year": "2007 - 2011"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Faculty of Visual Communication",
-              "institution": "AduCrest University, New Delhi",
-              "year": "2019 - Present"
-            },
-            {
-              "position": "Senior Lecturer",
-              "institution": "Institute of Higher Studies",
-              "year": "2014 - 2019"
-            }
-          ],
-          "subjects": [
-            "Design Foundations",
-            "Advanced Research Methodology",
-            "Applied Analytical Methods",
-            "Professional Seminar",
-            "Capstone Project Mentorship"
-          ]
+          }
         },
         {
           "id": "sanjay-menon",
+          "slug": "sanjay-menon",
           "name": "Dr. Sanjay Menon",
           "role": "Faculty of Engineering",
           "department": "Engineering",
           "image": {
             "src": "/images/faculty/faculty-4.jpg",
             "alt": "Dr. Sanjay Menon, Faculty of Engineering at AduCrest University"
-          },
-          "slug": "sanjay-menon",
-          "shortBio": "Dr. Sanjay Menon is an esteemed educator in Engineering at AduCrest University, committed to research excellence, interactive mentoring, and academic success.",
-          "contact": {
-            "phone": "+1 000-000-000",
-            "email": "info@xyz.com",
-            "office": "Rachel Oto lemamea,300 Rexburg Ave,Fort Washington, MD 20744,United States"
-          },
-          "socials": [
-            {
-              "platform": "facebook",
-              "href": "https://www.facebook.com/"
-            },
-            {
-              "platform": "linkedin",
-              "href": "https://www.linkedin.com/"
-            },
-            {
-              "platform": "instagram",
-              "href": "https://www.instagram.com/"
-            },
-            {
-              "platform": "mail",
-              "href": "mailto:info@xyz.com"
-            }
-          ],
-          "about": [
-            "Dr. Sanjay Menon serves as Faculty of Engineering at AduCrest University. With dedicated expertise in Engineering, they bring modern pedagogy and industry perspectives into classroom discussions.",
-            "Passionate about fostering critical thinking and research methodology, Dr. Sanjay Menon supervises undergraduate student projects and coordinates academic workshops across the faculty."
-          ],
-          "education": [
-            {
-              "degree": "Ph.D. in Engineering",
-              "institution": "Premier Central University, New Delhi",
-              "year": "2014 - 2018"
-            },
-            {
-              "degree": "Master's in Engineering",
-              "institution": "National Institute of Technology",
-              "year": "2011 - 2013"
-            },
-            {
-              "degree": "Bachelor's Degree",
-              "institution": "State University",
-              "year": "2007 - 2011"
-            }
-          ],
-          "experience": [
-            {
-              "position": "Faculty of Engineering",
-              "institution": "AduCrest University, New Delhi",
-              "year": "2019 - Present"
-            },
-            {
-              "position": "Senior Lecturer",
-              "institution": "Institute of Higher Studies",
-              "year": "2014 - 2019"
-            }
-          ],
-          "subjects": [
-            "Engineering Foundations",
-            "Advanced Research Methodology",
-            "Applied Analytical Methods",
-            "Professional Seminar",
-            "Capstone Project Mentorship"
-          ]
+          }
         }
       ],
-      "blogs": [
-        {
-          "id": "blog-1",
-          "slug": "successful-college-admission",
-          "title": "Tips for a Successful College Admission",
-          "category": "Admission",
-          "date": "August 10, 2026",
-          "author": "Neha Sharma",
-          "excerpt": "Discover essential tips and guidance to help you navigate the college admission process with confidence and ease.",
-          "image": {
-            "src": "/images/blogs/blog-1.jpg",
-            "alt": "Admission at AduCrest University"
-          },
-          "blocks": [
-            {
-              "type": "paragraph",
-              "text": "A successful application starts with understanding what you want to learn. Explore programmes carefully, check their eligibility requirements and make a realistic plan for the application process."
-            },
-            {
-              "type": "paragraph",
-              "text": "Preparing early gives you space to make thoughtful choices. Keep your application details organised, read each requirement and review everything before submission."
-            },
-            {
-              "type": "quote",
-              "text": "The best application tells a clear, honest story about your interests and readiness to learn.",
-              "author": "Dr. Neha Sharma",
-              "role": "Education Expert"
-            },
-            {
-              "type": "image",
-              "image": {
-                "src": "/images/blogs/group.jpg",
-                "alt": "A group of university students studying together in the library"
-              }
-            },
-            {
-              "type": "heading",
-              "text": "Build Your Application with Confidence"
-            },
-            {
-              "type": "paragraph",
-              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
-            },
-            {
-              "type": "list",
-              "items": [
-                "Research course requirements and deadlines",
-                "Gather accurate academic information",
-                "Choose a programme that matches your interests",
-                "Ask the admissions team when you need guidance"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "blog-2",
-          "slug": "importance-of-group-learning",
-          "title": "The Importance of Group Learning",
-          "category": "Student Life",
-          "date": "August 08, 2026",
-          "author": "Arjun Mehta",
-          "excerpt": "Learn how collaborative learning helps students build confidence, improve understanding and achieve better results.",
-          "image": {
-            "src": "/images/blogs/blog-2.jpg",
-            "alt": "Student Life at AduCrest University"
-          },
-          "blocks": [
-            {
-              "type": "paragraph",
-              "text": "Learning with other people gives you the chance to explain ideas, ask questions and discover new perspectives. A good study group makes room for every member to contribute."
-            },
-            {
-              "type": "paragraph",
-              "text": "Keep your group small enough for useful discussion. Agree on practical tasks, share responsibilities and take a moment to reflect on what still needs attention."
-            },
-            {
-              "type": "quote",
-              "text": "We learn more deeply when we listen carefully and help each other understand.",
-              "author": "Dr. Arjun Mehta",
-              "role": "Education Expert"
-            },
-            {
-              "type": "image",
-              "image": {
-                "src": "/images/blogs/group.jpg",
-                "alt": "A group of university students studying together in the library"
-              }
-            },
-            {
-              "type": "heading",
-              "text": "Make Collaboration Work"
-            },
-            {
-              "type": "paragraph",
-              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
-            },
-            {
-              "type": "list",
-              "items": [
-                "Set a clear goal for every session",
-                "Give every member time to contribute",
-                "Explain ideas in your own words",
-                "Review what the group has learned"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "blog-3",
-          "slug": "stay-focused-while-studying",
-          "title": "How to Stay Focused While Studying",
-          "category": "Study Tips",
-          "date": "August 05, 2026",
-          "author": "Rohan Gupta",
-          "excerpt": "Explore practical study tips and techniques to stay motivated, manage time and improve productivity.",
-          "image": {
-            "src": "/images/blogs/blog-3.jpg",
-            "alt": "Study Tips at AduCrest University"
-          },
-          "blocks": [
-            {
-              "type": "paragraph",
-              "text": "Focused study begins with a manageable plan. Choose one task, create a calm workspace and give yourself a clear starting point rather than trying to complete everything at once."
-            },
-            {
-              "type": "paragraph",
-              "text": "Experiment with the length of your study sessions and notice when your attention is strongest. A routine that includes rest is easier to maintain over a full semester."
-            },
-            {
-              "type": "quote",
-              "text": "Consistency grows from small, repeatable habits.",
-              "author": "Dr. Rohan Gupta",
-              "role": "Education Expert"
-            },
-            {
-              "type": "image",
-              "image": {
-                "src": "/images/blogs/group.jpg",
-                "alt": "A group of university students studying together in the library"
-              }
-            },
-            {
-              "type": "heading",
-              "text": "Build a Sustainable Study Routine"
-            },
-            {
-              "type": "paragraph",
-              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
-            },
-            {
-              "type": "list",
-              "items": [
-                "Break large assignments into small tasks",
-                "Set a realistic goal for each study session",
-                "Keep distracting notifications out of reach",
-                "Take regular breaks and review your progress"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "blog-4",
-          "slug": "benefits-of-online-education-2026",
-          "title": "Benefits of Online Education in 2026",
-          "category": "Online Learning",
-          "date": "August 02, 2026",
-          "author": "Neha Sharma",
-          "excerpt": "Discover how online learning is creating new opportunities for students to learn flexibly and grow their skills.",
-          "image": {
-            "src": "/images/blogs/blog-4.jpg",
-            "alt": "Online Learning at AduCrest University"
-          },
-          "blocks": [
-            {
-              "type": "paragraph",
-              "text": "Online learning can make education easier to fit around other responsibilities. Recorded resources, digital reading and structured activities let students revisit key ideas at their own pace."
-            },
-            {
-              "type": "paragraph",
-              "text": "Flexibility works best alongside clear expectations. Check the delivery format for your chosen programme and stay connected with your instructors and classmates."
-            },
-            {
-              "type": "quote",
-              "text": "Flexible learning creates opportunity when students also have a clear path and good support.",
-              "author": "Dr. Neha Sharma",
-              "role": "Education Expert"
-            },
-            {
-              "type": "image",
-              "image": {
-                "src": "/images/blogs/group.jpg",
-                "alt": "A group of university students studying together in the library"
-              }
-            },
-            {
-              "type": "heading",
-              "text": "Learn with Flexibility and Purpose"
-            },
-            {
-              "type": "paragraph",
-              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
-            },
-            {
-              "type": "list",
-              "items": [
-                "Plan regular time for your online coursework",
-                "Participate in discussions and live sessions",
-                "Use recorded resources to review difficult topics",
-                "Ask for support when you need it"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "blog-5",
-          "slug": "complete-guide-to-campus-life",
-          "title": "A Complete Guide to Campus Life",
-          "category": "Campus Life",
-          "date": "July 28, 2026",
-          "author": "Pooja Verma",
-          "excerpt": "From academics to extracurricular activities, explore how to make the most of your university experience.",
-          "image": {
-            "src": "/images/blogs/blog-5.jpg",
-            "alt": "Campus Life at AduCrest University"
-          },
-          "blocks": [
-            {
-              "type": "paragraph",
-              "text": "Campus life brings together learning, friendship and opportunities to try something new. Start by getting familiar with your timetable, student services and the spaces available for study."
-            },
-            {
-              "type": "paragraph",
-              "text": "You do not need to do everything at once. Choose a few activities, build a reliable weekly routine and reach out to student support when you have questions."
-            },
-            {
-              "type": "quote",
-              "text": "A sense of belonging grows through everyday connections.",
-              "author": "Dr. Pooja Verma",
-              "role": "Education Expert"
-            },
-            {
-              "type": "image",
-              "image": {
-                "src": "/images/blogs/group.jpg",
-                "alt": "A group of university students studying together in the library"
-              }
-            },
-            {
-              "type": "heading",
-              "text": "Find Your Place on Campus"
-            },
-            {
-              "type": "paragraph",
-              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
-            },
-            {
-              "type": "list",
-              "items": [
-                "Explore the library and shared study spaces",
-                "Join a club that matches your interests",
-                "Meet classmates and join campus activities",
-                "Keep a healthy balance between study and rest"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "blog-6",
-          "slug": "skills-for-a-bright-career",
-          "title": "Top Skills to Build for a Bright Career",
-          "category": "Career Guidance",
-          "date": "July 25, 2026",
-          "author": "Kavya Nair",
-          "excerpt": "Explore useful skills and how you can develop them to prepare for a changing professional world.",
-          "image": {
-            "src": "/images/blogs/blog-6.jpg",
-            "alt": "Career Guidance at AduCrest University"
-          },
-          "blocks": [
-            {
-              "type": "paragraph",
-              "text": "A strong career foundation includes subject knowledge and the ability to work well with other people. Communication, critical thinking and adaptability become stronger through regular practice."
-            },
-            {
-              "type": "paragraph",
-              "text": "Look for opportunities to apply your learning in projects, volunteering and group activities. Keep examples of your work and use them to explain your process and progress."
-            },
-            {
-              "type": "quote",
-              "text": "Your career develops one considered step, useful skill and learning experience at a time.",
-              "author": "Dr. Kavya Nair",
-              "role": "Education Expert"
-            },
-            {
-              "type": "image",
-              "image": {
-                "src": "/images/blogs/group.jpg",
-                "alt": "A group of university students studying together in the library"
-              }
-            },
-            {
-              "type": "heading",
-              "text": "Turn Learning into Professional Confidence"
-            },
-            {
-              "type": "paragraph",
-              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
-            },
-            {
-              "type": "list",
-              "items": [
-                "Practice clear written and verbal communication",
-                "Build a portfolio of meaningful project work",
-                "Ask for constructive feedback",
-                "Reflect on what each experience teaches you"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "blog-7",
-          "slug": "creating-inclusive-classrooms",
-          "title": "Creating Inclusive Classrooms for a Brighter Tomorrow",
-          "highlight": "Brighter Tomorrow",
-          "category": "Education",
-          "date": "August 6, 2026",
-          "author": "Neha Sharma",
-          "excerpt": "Discover how AduCrest University is building inclusive learning spaces where every student belongs, learns and grows.",
-          "image": {
-            "src": "/images/blogs/blog-1.jpg",
-            "alt": "Education at AduCrest University"
-          },
-          "blocks": [
-            {
-              "type": "paragraph",
-              "text": "An inclusive classroom is more than just a learning space — it is a place where every student feels welcomed, valued and supported. Inclusivity in education helps create an environment where students from different backgrounds, abilities and perspectives can learn, grow and succeed together."
-            },
-            {
-              "type": "paragraph",
-              "text": "At our university, we believe that every learner has unique strengths and potential. By creating an inclusive culture, we can support equal opportunities, build confidence and prepare students for a brighter future."
-            },
-            {
-              "type": "quote",
-              "text": "When every student feels included, they are not just learning — they are belonging.",
-              "author": "Dr. Neha Sharma",
-              "role": "Education Expert"
-            },
-            {
-              "type": "paragraph",
-              "text": "Inclusivity allows students to bring their authentic selves into the classroom. It encourages respect, empathy and collaboration, which are essential skills for both academic and personal success. Teachers play a key role by offering diverse learning resources, adapting teaching methods and recognising individual needs."
-            },
-            {
-              "type": "image",
-              "image": {
-                "src": "/images/blogs/group.jpg",
-                "alt": "A group of university students studying together in the library"
-              }
-            },
-            {
-              "type": "heading",
-              "text": "Growing Better Every Day"
-            },
-            {
-              "type": "paragraph",
-              "text": "Inclusive education is a continuous journey. It requires commitment from educators, students and institutions to create a supportive and encouraging environment. By working together, we can break down barriers and empower every learner to reach their full potential."
-            },
-            {
-              "type": "list",
-              "items": [
-                "Encourages equal opportunities for all students",
-                "Builds confidence and self-esteem",
-                "Promotes respect, diversity and collaboration",
-                "Prepares students for a successful future"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "blog-8",
-          "slug": "learning-together-growing-together",
-          "title": "Learning Together, Growing Together",
-          "category": "Student Life",
-          "date": "August 8, 2026",
-          "author": "Ananya Singh",
-          "excerpt": "Explore how collaboration, friendship and shared experiences shape a successful university journey.",
-          "image": {
-            "src": "/images/blogs/blog-2.jpg",
-            "alt": "Student Life at AduCrest University"
-          },
-          "blocks": [
-            {
-              "type": "paragraph",
-              "text": "University is a place to discover new ideas and build meaningful connections. Shared projects and everyday conversations help students learn about themselves and the people around them."
-            },
-            {
-              "type": "paragraph",
-              "text": "Working with others takes patience and practice. Make space for questions, be clear about responsibilities and recognise the different strengths each person brings."
-            },
-            {
-              "type": "quote",
-              "text": "A supportive learning community helps every member grow.",
-              "author": "Dr. Ananya Singh",
-              "role": "Education Expert"
-            },
-            {
-              "type": "image",
-              "image": {
-                "src": "/images/blogs/group.jpg",
-                "alt": "A group of university students studying together in the library"
-              }
-            },
-            {
-              "type": "heading",
-              "text": "Create Connections Through Learning"
-            },
-            {
-              "type": "paragraph",
-              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
-            },
-            {
-              "type": "list",
-              "items": [
-                "Listen to perspectives different from your own",
-                "Share ideas and resources thoughtfully",
-                "Celebrate progress within your study group",
-                "Reach out to classmates and offer support"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "blog-9",
-          "slug": "where-curiosity-becomes-confidence",
-          "title": "Where Curiosity Becomes Confidence Every Day",
-          "category": "Education",
-          "date": "August 5, 2026",
-          "author": "Vikram Joshi",
-          "excerpt": "Learn how students explore new ideas and build the confidence to achieve their goals.",
-          "image": {
-            "src": "/images/blogs/blog-3.jpg",
-            "alt": "Education at AduCrest University"
-          },
-          "blocks": [
-            {
-              "type": "paragraph",
-              "text": "Curiosity is the starting point for meaningful learning. Asking a question, trying a new approach and making a careful observation help students develop a confident understanding."
-            },
-            {
-              "type": "paragraph",
-              "text": "Confidence does not mean having every answer. It grows when you learn how to investigate uncertainty, seek guidance and keep working through a challenge."
-            },
-            {
-              "type": "quote",
-              "text": "Every thoughtful question opens another possibility for learning.",
-              "author": "Dr. Vikram Joshi",
-              "role": "Education Expert"
-            },
-            {
-              "type": "image",
-              "image": {
-                "src": "/images/blogs/group.jpg",
-                "alt": "A group of university students studying together in the library"
-              }
-            },
-            {
-              "type": "heading",
-              "text": "Keep Asking, Keep Growing"
-            },
-            {
-              "type": "paragraph",
-              "text": "Good learning habits develop through practice, reflection and support. Take time to review what works for you, learn from feedback and build on each small step."
-            },
-            {
-              "type": "list",
-              "items": [
-                "Ask questions in class and independent study",
-                "Try unfamiliar subjects and practical activities",
-                "Reflect on feedback and revise your approach",
-                "Recognise the progress you make over time"
-              ]
-            }
-          ]
-        }
-      ],
+      "blogs": [],
       "testimonials": [
         {
           "id": "priya",

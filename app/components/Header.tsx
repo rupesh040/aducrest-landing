@@ -34,14 +34,12 @@ export function Header({ data }: { data: HeaderSection }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change without cascading effect renders
   const [prevPath, setPrevPath] = useState(path);
   if (prevPath !== path) {
     setPrevPath(path);
     setOpen(false);
   }
 
-  // Prevent background scrolling on mobile when menu is open
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
@@ -62,7 +60,6 @@ export function Header({ data }: { data: HeaderSection }) {
             : "shadow-md border-b border-transparent"
         }`}
       >
-        {/* Luminous gold accent line at bottom when scrolled */}
         <div
           className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold/60 to-transparent transition-opacity duration-300 pointer-events-none ${
             scrolled ? "opacity-100" : "opacity-0"
@@ -73,7 +70,6 @@ export function Header({ data }: { data: HeaderSection }) {
         <div
           className="container flex items-center justify-between gap-3 sm:gap-4 md:gap-10 h-20 md:h-[84px]"
         >
-          {/* Brand Logo with responsive sizing to prevent mobile crowding */}
           <Link
             href="/"
             className="shrink-0 transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] py-1"
@@ -90,7 +86,6 @@ export function Header({ data }: { data: HeaderSection }) {
             />
           </Link>
 
-          {/* Animated Hamburger / Close Button */}
           <button
             className="lg:hidden p-2 rounded-lg border border-white/20 text-white hover:bg-white/10 active:scale-95 transition-all duration-200 flex items-center justify-center shrink-0 w-10 h-10"
             type="button"
@@ -121,7 +116,6 @@ export function Header({ data }: { data: HeaderSection }) {
             </div>
           </button>
 
-          {/* Desktop Navigation Bar */}
           <nav
             id="desktop-navigation"
             className="hidden lg:flex lg:flex-row lg:items-center lg:gap-2 xl:gap-5 font-heading font-bold text-[16px] xl:text-[17px]"
@@ -131,7 +125,7 @@ export function Header({ data }: { data: HeaderSection }) {
                 link.href === "/" ? path === "/" : path.startsWith(link.href);
               return (
                 <Link
-                  key={link.href}
+                  key={`${link.label}-${link.href}`}
                   href={link.href}
                   className={`relative px-3 py-2 rounded-lg transition-all duration-200 whitespace-nowrap flex items-center gap-1.5 group hover:-translate-y-0.5 ${
                     isActive
@@ -141,7 +135,6 @@ export function Header({ data }: { data: HeaderSection }) {
                   aria-current={isActive ? "page" : undefined}
                 >
                   <span>{link.label}</span>
-                  {/* Glowing animated underline on desktop */}
                   <span
                     className={`absolute bottom-0 left-2.5 right-2.5 h-[2px] bg-gradient-to-r from-gold to-[#ffd35a] rounded-full transition-all duration-300 ease-out shadow-[0_0_8px_rgba(255,184,0,0.5)] ${
                       isActive
@@ -153,22 +146,22 @@ export function Header({ data }: { data: HeaderSection }) {
               );
             })}
 
-            {/* CTA Button on Desktop */}
-            <Link
-              href={data.apply.href}
-              className="primary-button group mt-0 ml-2 xl:ml-3 shrink-0 font-body font-semibold !text-navy transition-all duration-300 hover:shadow-[0_6px_20px_rgba(255,184,0,0.4)] hover:scale-[1.03] active:scale-[0.98]"
-            >
-              <span>{data.apply.label}</span>
-              <ArrowRight
-                size={18}
-                className="transition-transform duration-300 group-hover:translate-x-1.5"
-                aria-hidden="true"
-              />
-            </Link>
+            {data.apply && (
+              <Link
+                href={data.apply.href}
+                className="primary-button group mt-0 ml-2 xl:ml-3 shrink-0 font-body font-semibold !text-navy transition-all duration-300 hover:shadow-[0_6px_20px_rgba(255,184,0,0.4)] hover:scale-[1.03] active:scale-[0.98]"
+              >
+                <span>{data.apply.label}</span>
+                <ArrowRight
+                  size={18}
+                  className="transition-transform duration-300 group-hover:translate-x-1.5"
+                  aria-hidden="true"
+                />
+              </Link>
+            )}
           </nav>
         </div>
 
-        {/* Mobile Navigation Drawer */}
         <div
           id="main-navigation"
           className={`lg:hidden absolute top-full left-0 right-0 bg-[#073b6c] border-t border-white/15 shadow-2xl transition-all duration-300 ease-out origin-top z-50 ${
@@ -183,7 +176,7 @@ export function Header({ data }: { data: HeaderSection }) {
                 link.href === "/" ? path === "/" : path.startsWith(link.href);
               return (
                 <Link
-                  key={link.href}
+                  key={`${link.label}-${link.href}`}
                   href={link.href}
                   style={{ animationDelay: `${index * 35}ms` }}
                   className={`px-4 py-3 rounded-xl transition-all duration-200 whitespace-nowrap flex items-center justify-between gap-2 animate-mobile-item ${
@@ -199,26 +192,26 @@ export function Header({ data }: { data: HeaderSection }) {
               );
             })}
 
-            {/* Mobile CTA Button - Full width, comfortable touch target */}
-            <div className="pt-2">
-              <Link
-                href={data.apply.href}
-                className="primary-button group w-full justify-center shrink-0 font-body font-semibold !text-navy min-h-[48px] transition-all duration-300 active:scale-[0.98]"
-                onClick={() => setOpen(false)}
-              >
-                <span>{data.apply.label}</span>
-                <ArrowRight
-                  size={18}
-                  className="transition-transform duration-300 group-hover:translate-x-1.5"
-                  aria-hidden="true"
-                />
-              </Link>
-            </div>
+            {data.apply && (
+              <div className="pt-2">
+                <Link
+                  href={data.apply.href}
+                  className="primary-button group w-full justify-center shrink-0 font-body font-semibold !text-navy min-h-[48px] transition-all duration-300 active:scale-[0.98]"
+                  onClick={() => setOpen(false)}
+                >
+                  <span>{data.apply.label}</span>
+                  <ArrowRight
+                    size={18}
+                    className="transition-transform duration-300 group-hover:translate-x-1.5"
+                    aria-hidden="true"
+                  />
+                </Link>
+              </div>
+            )}
           </nav>
         </div>
       </header>
 
-      {/* Dimmed backdrop overlay covering the rest of the screen */}
       {open && (
         <div
           className="lg:hidden fixed inset-0 bg-black/60 backdrop-blur-xs z-40 transition-opacity duration-300"

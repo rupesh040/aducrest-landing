@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 export function AnimationController() {
   const pathname = usePathname();
 
-  // Initialize IntersectionObserver for scroll-reveal animations
   const setupObserver = useCallback(() => {
     if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
       document.querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-zoom, .reveal-down").forEach((el) => {
@@ -50,13 +49,11 @@ export function AnimationController() {
     return observer;
   }, []);
 
-  // Set body as js-loaded and setup observer on route change or DOM change
   useEffect(() => {
     document.body.classList.add("js-loaded");
 
     const observer = setupObserver();
 
-    // Observe dynamic elements added after initial render (e.g., pagination, carousels)
     const mutationObserver = new MutationObserver(() => {
       setupObserver();
     });

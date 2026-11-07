@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState, type FormEvent } from "react";
+import { useId, useState, useEffect, type FormEvent } from "react";
 import { content } from "@/app/data";
 import {
   EMPTY_FORM,
@@ -35,6 +35,44 @@ export function useUniversityForm(
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitting, setSubmitting] = useState(false);
   const [feedback, setFeedback] = useState<SubmissionResponse | null>(null);
+
+  useEffect(() => {
+    if (kind !== "admission") return;
+    const handler = (event: Event) => {
+      const custom = event as CustomEvent<{ courseId: string }>;
+      const courseId = custom.detail?.courseId;
+      if (!courseId) return;
+
+      const deptMap: Record<string, string> = {
+        ba: "arts-humanities",
+        ma: "arts-humanities",
+        bsc: "science",
+        msc: "science",
+        bcom: "commerce",
+        btech: "engineering",
+        mba: "management",
+        bba: "management",
+        mca: "computer-applications",
+        bca: "computer-applications",
+        bpharm: "medical-health",
+        bdes: "design",
+      };
+
+      setValues((prev) => ({
+        ...prev,
+        course: courseId,
+        department: deptMap[courseId] || prev.department,
+      }));
+      setErrors((prev) => ({
+        ...prev,
+        course: undefined,
+        department: undefined,
+      }));
+    };
+
+    window.addEventListener("aducrest:selectCourse", handler);
+    return () => window.removeEventListener("aducrest:selectCourse", handler);
+  }, [kind]);
 
   function change(name: FormFieldName, value: string) {
     const nextValue =

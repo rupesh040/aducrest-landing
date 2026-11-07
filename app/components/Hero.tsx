@@ -1,11 +1,16 @@
-import { Photo, PrimaryButton } from "./Primitives";
+import Link from "next/link";
+import { ArrowRight, Sparkles } from "lucide-react";
+import { Photo } from "./Primitives";
 import type { HeroSection } from "@/app/data/types";
 
 const delays = ["delay-100", "delay-200", "delay-300"];
 
 export function Hero({ data }: { data: HeroSection }) {
   return (
-    <section className="py-8 relative min-h-[560px] md:min-h-[520px] lg:min-h-[560px] flex items-center bg-[#edf6fb] overflow-hidden">
+    <section
+      id="hero"
+      className="py-8 relative min-h-[560px] md:min-h-[520px] lg:min-h-[560px] flex items-center bg-[#edf6fb] overflow-hidden scroll-mt-20 md:scroll-mt-24"
+    >
       <div
         className="pointer-events-none absolute -top-28 -left-28 w-96 h-96 rounded-full bg-gradient-to-br from-[#ffd35a]/20 to-transparent blur-3xl animate-float"
         aria-hidden="true"
@@ -63,8 +68,19 @@ export function Hero({ data }: { data: HeroSection }) {
         <p className="reveal delay-250 text-muted text-base sm:text-lg max-w-[500px] my-5 leading-relaxed">
           {data.description}
         </p>
-        <div className="reveal delay-300 inline-block transition-transform duration-300 hover:scale-[1.02]">
-          <PrimaryButton button={data.button} />
+        <div className="reveal delay-300 flex flex-wrap items-center gap-3.5 sm:gap-4 mt-2">
+          <Link
+            href="#apply"
+            className="primary-button group font-body font-semibold !text-navy transition-all duration-300 hover:shadow-[0_8px_25px_rgba(255,184,0,0.45)] hover:scale-[1.03] active:scale-[0.98] min-h-[48px] px-6"
+          >
+            <Sparkles size={18} className="text-navy shrink-0" />
+            <span>Apply Now</span>
+            <ArrowRight
+              size={18}
+              className="transition-transform duration-300 group-hover:translate-x-1.5 shrink-0"
+              aria-hidden="true"
+            />
+          </Link>
         </div>
       </div>
     </section>

@@ -27,7 +27,6 @@ function siteDate(now: Date): string {
   return `${part("year")}-${part("month")}-${part("day")}`;
 }
 
-/** Shared by controlled forms and API routes so both sides enforce the same rules. */
 export function validateSubmission(input: unknown, kind: SubmissionKind, now = new Date()): {
   values: FormValues; errors: FormErrors; valid: boolean; payloadValid: boolean;
 } {

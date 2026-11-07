@@ -12,21 +12,18 @@ export function ApplicationSection({
   initialCourse?: string;
 }) {
   return (
-    <section className="section-padding py-8 bg-[#f5faff]">
+    <section id="apply" className="section-padding py-8 bg-[#f5faff] scroll-mt-20 md:scroll-mt-24 relative">
+      <span id="admission" className="sr-only" aria-hidden="true" />
+      <span id="admission-form" className="sr-only" aria-hidden="true" />
       <div className="container max-w-[1260px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[1.12fr_1fr] gap-6 lg:gap-8 items-start">
-          {/* Left Column: Application Form */}
           <div className="reveal">
             <AdmissionForm data={data.form} initialCourse={initialCourse} />
           </div>
 
-          {/* Right Column: Academic Journey Card + Contact Bar */}
           <div className="flex flex-col gap-6 min-w-0">
-            {/* Top Promo Card */}
             <div className="reveal delay-100 rounded-2xl border border-[#e2eaf1] bg-white shadow-sm overflow-hidden grid grid-cols-1 sm:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] items-stretch">
-              {/* Text Content */}
               <div className="p-6 sm:p-8 flex flex-col justify-center items-start">
-                {/* Eyebrow */}
                 <div className="flex items-center gap-2 mb-3">
                   <span className="w-4 h-[2px] bg-[#d99b26] rounded-full" />
                   <span className="text-xs sm:text-[13px] font-bold tracking-widest text-[#0a2540] uppercase">
@@ -35,19 +32,16 @@ export function ApplicationSection({
                   <span className="w-4 h-[2px] bg-[#d99b26] rounded-full" />
                 </div>
 
-                {/* Heading */}
                 <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-[32px] leading-[1.2] text-[#0a2540] mb-3.5">
                   Begin Your <br className="hidden sm:inline" />
                   <span className="text-[#d99b26]">Academic Journey</span> <br className="hidden sm:inline" />
                   With Us
                 </h2>
 
-                {/* Description */}
                 <p className="text-slate-600 text-sm sm:text-[15px] leading-relaxed mb-5">
                   {data.promo.description}
                 </p>
 
-                {/* Checklist */}
                 <ul className="space-y-3 list-none p-0 m-0 w-full">
                   {data.promo.benefits.map((benefit) => (
                     <li
@@ -63,9 +57,7 @@ export function ApplicationSection({
                 </ul>
               </div>
 
-              {/* Student Photo with Campus Background & Golden Swooshes */}
               <div className="relative w-full h-[280px] sm:h-full min-h-[280px] sm:min-h-[310px] flex items-end justify-center overflow-hidden">
-                {/* Blurred campus background */}
                 <div className="absolute inset-0 bg-[#fdfbf6]">
                   <Image
                     src="/images/about/campus.webp"
@@ -76,7 +68,6 @@ export function ApplicationSection({
                   <div className="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-transparent" />
                 </div>
 
-                {/* Top-Right Golden Decorative Swoosh */}
                 <div className="absolute top-0 right-0 w-20 h-20 sm:w-24 sm:h-24 pointer-events-none z-10">
                   <svg viewBox="0 0 100 100" fill="none" className="w-full h-full text-[#f3be4d]">
                     <path
@@ -86,7 +77,6 @@ export function ApplicationSection({
                   </svg>
                 </div>
 
-                {/* Bottom-Right Golden Decorative Swoosh */}
                 <div className="absolute bottom-0 right-0 w-28 h-28 sm:w-32 sm:h-32 pointer-events-none z-10">
                   <svg viewBox="0 0 100 100" fill="none" className="w-full h-full text-[#f3be4d]">
                     <path
@@ -96,7 +86,6 @@ export function ApplicationSection({
                   </svg>
                 </div>
 
-                {/* Student cutout */}
                 <div className="relative z-10 w-full h-full flex items-end justify-center">
                   <Image
                     src={data.promo.image.src || "/images/hero/admissions.webp"}
@@ -110,7 +99,6 @@ export function ApplicationSection({
               </div>
             </div>
 
-            {/* Bottom Contact Info Bar - Robust 3-column layout without overlap */}
             <div className="reveal delay-200 rounded-2xl border border-[#e2eaf1] bg-white shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-3">
               {data.help.map((item) => (
                 <a

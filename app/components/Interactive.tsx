@@ -217,12 +217,12 @@ export function ScrollToTop() {
 }
 
 const YOUTUBE_SAMPLE_VIDEOS = [
-  "ScMzIvxBSi4", // Open Source Animation
-  "EngW7tLk6R8", // Harvard University Virtual Campus Tour
-  "M576WGiDBdQ", // Stanford University Campus Walk
-  "kJQP7kiw5Fk", // Trending Music
-  "dQw4w9WgXcQ", // Classic Never Gonna Give You Up
-  "LXb3EKWsInQ", // 4K Nature Tour
+  "ScMzIvxBSi4",
+  "EngW7tLk6R8",
+  "M576WGiDBdQ",
+  "kJQP7kiw5Fk",
+  "dQw4w9WgXcQ",
+  "LXb3EKWsInQ",
 ];
 
 function formatYouTubeEmbedUrl(url: string | null | undefined): string {
@@ -245,7 +245,6 @@ function formatYouTubeEmbedUrl(url: string | null | undefined): string {
     }
   }
 
-  // Pick a random YouTube video from the curated list
   const randomId =
     YOUTUBE_SAMPLE_VIDEOS[
       Math.floor(Math.random() * YOUTUBE_SAMPLE_VIDEOS.length)
@@ -274,7 +273,7 @@ export function VideoPreview({
 
   const handleClose = () => {
     setOpen(false);
-    setActiveEmbedUrl(""); // Stop playback immediately on close
+    setActiveEmbedUrl("");
   };
 
   useEffect(() => {
@@ -316,7 +315,6 @@ export function VideoPreview({
 
   return (
     <>
-      {/* Centered Play Button with Pulsing Ripple Effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-10">
         <span className="absolute w-16 h-16 rounded-full bg-gold/50 animate-ping pointer-events-none" />
         <button
@@ -334,7 +332,6 @@ export function VideoPreview({
         </button>
       </div>
 
-      {/* Video Popup Modal Rendered at document.body level via React Portal */}
       {mounted &&
         open &&
         createPortal(

@@ -2,8 +2,7 @@
 
 import { useId, useRef, useState, type KeyboardEvent } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, GraduationCap, Minus, Plus } from "lucide-react";
+import { Minus, Plus } from "lucide-react";
 import type { FAQSection as FAQSectionData } from "@/app/data/types";
 
 export function FAQAccordion({ items }: { items: FAQSectionData["items"] }) {
@@ -119,11 +118,9 @@ function renderHeadingTitle(title: string, highlight?: string) {
 
 export function FAQSectionView({ data }: { data: FAQSectionData }) {
   return (
-    <section className="section-padding py-8 bg-surface">
+    <section id="faq" className="section-padding py-8 bg-surface scroll-mt-20 md:scroll-mt-24">
       <div className="container grid grid-cols-1 lg:grid-cols-[1.1fr_1.2fr] gap-6 lg:gap-8 xl:gap-10 items-start">
-        {/* Left Column: Heading + Image Composite */}
         <div className="reveal reveal-right flex flex-col">
-          {/* Eyebrow */}
           {data.heading.eyebrow && (
             <div className="flex items-center gap-3 text-navy uppercase text-xs font-bold tracking-[1.8px] mb-2 sm:mb-2.5">
               <span className="w-8 h-[2.5px] bg-gold rounded-full shrink-0" />
@@ -131,21 +128,17 @@ export function FAQSectionView({ data }: { data: FAQSectionData }) {
             </div>
           )}
 
-          {/* Heading */}
           <h2 className="text-heading font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-[1.2] tracking-tight">
             {renderHeadingTitle(data.heading.title, data.heading.highlight)}
           </h2>
 
-          {/* Description */}
           {data.heading.description && (
             <p className="mt-2.5 text-muted text-sm sm:text-base leading-relaxed max-w-xl">
               {data.heading.description}
             </p>
           )}
 
-          {/* Image & Support Card Composite */}
-          <div className="relative mt-5 sm:mt-6 flex flex-col sm:flex-row items-center sm:items-end">
-            {/* Student Image */}
+          <div className="relative mt-5 sm:mt-6 flex justify-center sm:justify-start">
             <div className="relative shrink-0 select-none pointer-events-none">
               <Image
                 src={data.image.src}
@@ -156,50 +149,9 @@ export function FAQSectionView({ data }: { data: FAQSectionData }) {
                 className="w-[250px] sm:w-[280px] md:w-[310px] h-auto object-contain block"
               />
             </div>
-
-            {/* Floating Support Card */}
-            <div className="relative -mt-8 sm:mt-0 sm:-ml-14 md:-ml-16 mb-3 sm:mb-4 z-10 w-full max-w-[270px] sm:max-w-[285px] shrink-0">
-              {/* Subtle Decorative Dashed Arc behind bottom-right */}
-              <svg
-                className="absolute -right-3 -bottom-3 sm:-right-4 sm:-bottom-4 w-20 h-20 sm:w-24 sm:h-24 pointer-events-none text-gold/70 z-[-1]"
-                viewBox="0 0 100 100"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M 15 25 C 55 30, 85 65, 70 100"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeDasharray="5 5"
-                  strokeLinecap="round"
-                />
-              </svg>
-
-              <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 shadow-[0_12px_32px_-4px_rgba(10,37,64,0.08),0_2px_10px_rgba(10,37,64,0.03)] border border-[#e5edf5] transition-all duration-300 hover:shadow-lift hover:-translate-y-1">
-                <div className="flex items-center gap-3.5 mb-2.5">
-                  <span className="w-11 h-11 rounded-full bg-[#e8f3fc] text-[#0066cc] flex items-center justify-center shrink-0">
-                    <GraduationCap size={24} aria-hidden="true" />
-                  </span>
-                  <h3 className="font-bold text-base sm:text-[17px] text-heading leading-tight m-0">
-                    {data.support.title}
-                  </h3>
-                </div>
-                <p className="text-muted text-xs sm:text-[13px] leading-relaxed mb-4 m-0">
-                  {data.support.description}
-                </p>
-                <Link
-                  href={data.support.button.href}
-                  className="inline-flex items-center gap-2 bg-gold hover:bg-[#e09b00] text-navy font-bold text-xs sm:text-sm px-5 py-2.5 rounded-full shadow-sm hover:shadow transition-all duration-200 active:scale-[0.98]"
-                >
-                  <span>{data.support.button.label}</span>
-                  <ArrowRight size={15} aria-hidden="true" />
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
 
-        {/* Right Column: FAQ Accordion */}
         <div className="reveal reveal-left delay-150 w-full pt-2 lg:pt-0">
           <FAQAccordion items={data.items} />
         </div>

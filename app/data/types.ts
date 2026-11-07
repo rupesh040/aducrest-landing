@@ -32,18 +32,7 @@ export interface PageConfiguration {
   description: string;
   components: ComponentMapping[];
 }
-export type PageId =
-  | "home"
-  | "about"
-  | "courses"
-  | "course-detail"
-  | "faculty"
-  | "faculty-detail"
-  | "blog"
-  | "blog-detail"
-  | "faq"
-  | "contact"
-  | "apply-now";
+export type PageId = "home";
 export interface TopbarSection {
   contacts: ContactLink[];
   socials: SocialLink[];
@@ -51,7 +40,7 @@ export interface TopbarSection {
 export interface HeaderSection {
   logo: ImageAsset;
   navigation: ButtonLink[];
-  apply: ButtonLink;
+  apply?: ButtonLink;
 }
 export interface FooterSection {
   logo: ImageAsset;
@@ -59,8 +48,8 @@ export interface FooterSection {
   socials: SocialLink[];
   linksTitle: string;
   links: ButtonLink[];
-  coursesTitle: string;
-  courseLinks: ButtonLink[];
+  coursesTitle?: string;
+  courseLinks?: ButtonLink[];
   addressTitle: string;
   contacts: FooterContact[];
   copyright: string;
@@ -77,7 +66,7 @@ export interface AboutSection {
   paragraphs: string[];
   images: ImageAsset[];
   benefits: { icon: string; title: string; description: string }[];
-  button: ButtonLink;
+  button?: ButtonLink;
   phone: { label: string; value: string; href: string };
 }
 export interface PopularCoursesSection {

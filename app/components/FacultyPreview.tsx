@@ -9,7 +9,7 @@ export function FacultyPreview({ data }: { data: FacultyPreviewSection }) {
     data.facultyIds.includes(f.id),
   );
   return (
-    <section className="section-padding py-8 bg-[#f4faff]">
+    <section id="faculty" className="section-padding py-8 bg-[#f4faff] scroll-mt-20 md:scroll-mt-24">
       <div className="container">
         <div className="reveal">
           <SectionHeading heading={data.heading} />

@@ -9,9 +9,8 @@ export function ApplicationProcess({
   data: ApplicationProcessSection;
 }) {
   return (
-    <section className="section-padding py-8 bg-[#fcf9f4]">
+    <section id="admissions" className="section-padding py-8 bg-[#fcf9f4] scroll-mt-20 md:scroll-mt-24">
       <div className="container max-w-[1260px] mx-auto px-4 sm:px-6">
-        {/* Header */}
         <div className="text-center mb-10 md:mb-14 reveal">
           <div className="flex items-center justify-center gap-2.5 mb-2.5">
             <span className="w-5 h-[2px] bg-[#d99b26] rounded-full" />
@@ -26,7 +25,6 @@ export function ApplicationProcess({
           </h2>
         </div>
 
-        {/* 4 Steps Horizontal Flow */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:items-center lg:justify-between gap-6 lg:gap-3 xl:gap-4 reveal delay-100">
           {data.steps.map((step, index) => {
             const isBlue = index % 2 === 0;
