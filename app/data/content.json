@@ -155,6 +155,10 @@
                 "component": "EducationAbout1"
               },
               {
+                "key": "popular-courses",
+                "component": "EducationPopularCourses1"
+              },
+              {
                 "key": "admission-cta",
                 "component": "EducationAdmissionCTA1"
               },
@@ -246,6 +250,10 @@
                 "href": "#about"
               },
               {
+                "label": "Courses",
+                "href": "#courses"
+              },
+              {
                 "label": "Faculty",
                 "href": "#faculty"
               },
@@ -304,6 +312,10 @@
               {
                 "label": "About",
                 "href": "#about"
+              },
+              {
+                "label": "Courses",
+                "href": "#courses"
               },
               {
                 "label": "Faculty",
@@ -653,6 +665,33 @@
                 "href": "#hero"
               }
             ]
+          }
+        }
+      },
+      "popular-courses": {
+        "variants": {
+          "EducationPopularCourses1": {
+            "heading": {
+              "eyebrow": "OUR POPULAR COURSES",
+              "title": "Explore Our",
+              "highlight": "Popular Courses",
+              "description": "Choose from a wide range of undergraduate and postgraduate courses designed to help you build skills, gain knowledge and achieve your career goals."
+            },
+            "courseSlugs": [
+              "bachelor-of-arts",
+              "bachelor-of-science",
+              "bachelor-of-commerce",
+              "bachelor-of-technology",
+              "master-of-business-administration",
+              "master-of-computer-applications",
+              "bachelor-of-pharmacy",
+              "bachelor-of-design",
+              "bachelor-of-business-administration",
+              "master-of-arts",
+              "master-of-science",
+              "bachelor-of-computer-applications"
+            ],
+            "pageSize": 4
           }
         }
       }
