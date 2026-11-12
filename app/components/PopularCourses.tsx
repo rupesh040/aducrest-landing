@@ -1,42 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import { Clock3, GraduationCap, ArrowRight } from "lucide-react";
 import { content } from "@/app/data";
 import { SectionHeading, Photo } from "./Primitives";
 import type { Course, PopularCoursesSection } from "@/app/data/types";
 
-const CATEGORIES = [
-  { id: "all", label: "All Programs" },
-  { id: "tech", label: "Engineering & Tech" },
-  { id: "business", label: "Business & Management" },
-  { id: "comp-app", label: "Computer Applications" },
-  { id: "arts", label: "Arts & Humanities" },
-  { id: "science-health", label: "Science & Healthcare" },
-  { id: "design", label: "Design" },
-] as const;
-
 export function PopularCourses({ data }: { data: PopularCoursesSection }) {
-  const [activeCategory, setActiveCategory] = useState<string>("all");
-
   const allCourses = content.collections.courses;
-  const filteredCourses = allCourses.filter((course) => {
-    if (activeCategory === "all") return true;
-    if (activeCategory === "tech") return course.category === "Engineering";
-    if (activeCategory === "business")
-      return course.category === "Management" || course.category === "Commerce";
-    if (activeCategory === "comp-app")
-      return course.category === "Computer Applications";
-    if (activeCategory === "arts")
-      return course.category === "Arts & Humanities";
-    if (activeCategory === "science-health")
-      return (
-        course.category === "Science" ||
-        course.category === "Medical & Health Sciences"
-      );
-    if (activeCategory === "design") return course.category === "Design";
-    return true;
-  });
 
   const handleApplyCourse = (course: Course) => {
     if (typeof window !== "undefined") {
@@ -70,28 +40,8 @@ export function PopularCourses({ data }: { data: PopularCoursesSection }) {
           <SectionHeading heading={data.heading} />
         </div>
 
-        <div className="reveal delay-100 flex items-center justify-start md:justify-center gap-2 overflow-x-auto pb-3 mb-8 no-scrollbar scroll-smooth">
-          {CATEGORIES.map((tab) => {
-            const active = activeCategory === tab.id;
-            return (
-              <button
-                key={tab.id}
-                type="button"
-                onClick={() => setActiveCategory(tab.id)}
-                className={`px-4 py-2 rounded-full text-xs sm:text-sm font-heading font-bold whitespace-nowrap transition-all duration-200 active:scale-95 cursor-pointer ${
-                  active
-                    ? "bg-navy text-white shadow-md scale-105"
-                    : "bg-white text-heading/80 hover:bg-white/80 hover:text-navy border border-[#d6e3ee]"
-                }`}
-              >
-                {tab.label}
-              </button>
-            );
-          })}
-        </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredCourses.map((course) => (
+          {allCourses.map((course) => (
             <article
               key={course.id}
               className="lift-card flex flex-col h-full bg-white rounded-2xl shadow-card hover:shadow-xl transition-all duration-300 overflow-hidden group border border-[#e2eaf0]"

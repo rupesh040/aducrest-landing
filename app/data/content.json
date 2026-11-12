@@ -403,10 +403,6 @@
             ],
             "images": [
               {
-                "src": "/images/hero/students.webp",
-                "alt": "A smiling AduCrest student holding her notebooks"
-              },
-              {
                 "src": "/images/about/campus.webp",
                 "alt": "The university's historic academic building and landscaped grounds"
               }

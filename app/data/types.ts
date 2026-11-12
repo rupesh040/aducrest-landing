@@ -89,30 +89,6 @@ export interface TestimonialsSection {
   heading?: Heading;
   testimonialIds: string[];
 }
-export interface LatestBlogsSection {
-  heading: Heading;
-  blogSlugs: string[];
-  pageSize: number;
-}
-export interface BannerSection {
-  title: string;
-  image: ImageAsset;
-  breadcrumbs: { label: string; href?: string }[];
-}
-export interface ListingSection {
-  heading: Heading;
-  pageSize: number;
-}
-export interface CourseDetailSection {
-  overviewHeading: Heading;
-  outcomesHeading: Heading;
-  detailsHeading: Heading;
-  applyLabel: string;
-}
-export interface BlogDetailSection {
-  recentTitle: string;
-  recentSlugs: string[];
-}
 export interface FAQSection {
   heading: Heading;
   image: ImageAsset;
@@ -135,20 +111,6 @@ export interface FormSectionConfig {
   submitLabel: string;
   fields: FormFieldName[];
 }
-export interface ContactSection {
-  heading: Heading;
-  form: FormSectionConfig;
-  information: {
-    icon: string;
-    title: string;
-    lines: string[];
-    href?: string;
-  }[];
-  image: ImageAsset;
-  socialTitle: string;
-  socials: SocialLink[];
-  map: { embedUrl: string; title: string; notice: string };
-}
 export interface ApplicationSection {
   heading: Heading;
   form: FormSectionConfig;
@@ -170,38 +132,6 @@ export interface ApplicationProcessSection {
   heading: Heading;
   steps: { title: string; description: string; icon: string }[];
 }
-export interface FacultyEducation {
-  degree: string;
-  institution: string;
-  year: string;
-}
-
-export interface FacultyExperience {
-  position: string;
-  institution: string;
-  year: string;
-}
-
-export interface FacultyContact {
-  phone: string;
-  email: string;
-  office: string;
-}
-
-export interface FacultySocial {
-  platform: string;
-  href: string;
-}
-
-export interface FacultyDetailSection {
-  profileEyebrow?: string;
-  contactTitle?: string;
-  subjectsTitle?: string;
-  aboutTitle?: string;
-  educationTitle?: string;
-  experienceTitle?: string;
-}
-
 export type SectionData =
   | TopbarSection
   | HeaderSection
@@ -211,15 +141,8 @@ export type SectionData =
   | PopularCoursesSection
   | AdmissionCTASection
   | FacultyPreviewSection
-  | FacultyDetailSection
   | TestimonialsSection
-  | LatestBlogsSection
-  | BannerSection
-  | ListingSection
-  | CourseDetailSection
-  | BlogDetailSection
   | FAQSection
-  | ContactSection
   | ApplicationSection
   | ApplicationProcessSection;
 export interface CourseMeta {
@@ -255,13 +178,6 @@ export interface Faculty {
   role: string;
   department: string;
   image: ImageAsset;
-  shortBio?: string;
-  about?: string[];
-  contact?: FacultyContact;
-  socials?: FacultySocial[];
-  education?: FacultyEducation[];
-  experience?: FacultyExperience[];
-  subjects?: string[];
 }
 export interface Testimonial {
   id: string;

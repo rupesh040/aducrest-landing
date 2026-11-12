@@ -11,20 +11,30 @@ export function About({ data }: { data: AboutSection }) {
   return (
     <section id="about" className="section-padding py-8 bg-surface overflow-hidden scroll-mt-20 md:scroll-mt-24">
       <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-        <div className="reveal reveal-right relative min-h-[380px] sm:min-h-[460px] lg:min-h-[520px] max-w-[500px] lg:max-w-none mx-auto w-full">
-          <div className="absolute w-[72%] h-[75%] bg-[#e5edf8] top-8 left-8 sm:top-10 sm:left-10 rounded-2xl animate-float-reverse" />
-          <Photo
-            asset={data.images[0]}
-            className="w-[76%] h-[340px] sm:h-[420px] lg:h-[470px] rounded-xl shadow-md transition-transform duration-500 hover:scale-[1.02]"
-            sizes="(max-width: 767px) 76vw, 34vw"
-          />
-          <div className="absolute right-0 bottom-0 w-[48%] h-[220px] sm:h-[280px] lg:h-[310px] rounded-xl border-4 border-white shadow-lift overflow-hidden transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+        <div className="reveal reveal-right relative min-h-[340px] sm:min-h-[420px] lg:min-h-[480px] max-w-[500px] lg:max-w-none mx-auto w-full">
+          <div className="absolute w-[85%] h-[90%] bg-[#e5edf8] top-6 left-6 sm:top-8 sm:left-8 rounded-2xl animate-float-reverse" />
+          {data.images.length > 1 ? (
+            <>
+              <Photo
+                asset={data.images[0]}
+                className="w-[76%] h-[340px] sm:h-[420px] lg:h-[470px] rounded-xl shadow-md transition-transform duration-500 hover:scale-[1.02]"
+                sizes="(max-width: 767px) 76vw, 34vw"
+              />
+              <div className="absolute right-0 bottom-0 w-[48%] h-[220px] sm:h-[280px] lg:h-[310px] rounded-xl border-4 border-white shadow-lift overflow-hidden transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+                <Photo
+                  asset={data.images[1]}
+                  className="w-full h-full"
+                  sizes="(max-width: 767px) 43vw, 24vw"
+                />
+              </div>
+            </>
+          ) : (
             <Photo
-              asset={data.images[1]}
-              className="w-full h-full"
-              sizes="(max-width: 767px) 43vw, 24vw"
+              asset={data.images[0]}
+              className="w-full h-[340px] sm:h-[420px] lg:h-[480px] rounded-2xl shadow-lift transition-transform duration-500 hover:scale-[1.02]"
+              sizes="(max-width: 767px) 90vw, 45vw"
             />
-          </div>
+          )}
         </div>
 
         <div className="reveal delay-100 flex flex-col">
